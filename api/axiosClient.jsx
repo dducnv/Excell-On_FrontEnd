@@ -2,7 +2,7 @@ import axios from 'axios';
 import queryString from 'query-string';
 
 const axiosClient = axios.create({
-    baseURL: "https://admin-blog-manager.herokuapp.com/api",
+    baseURL: "https://excell-on/api/",
     // baseURL: "http://127.0.0.1:8000/api",
     headers: {
         'content-type': 'application/json',
