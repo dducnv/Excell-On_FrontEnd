@@ -3,9 +3,10 @@ import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import Link from 'next/link'
 const navigation = [
-    { name: 'Product', href: '#' },
-    { name: 'Features', href: '#' },
-    { name: 'Giới thiệu', href: '/login' },
+    { name: 'Home', href: '#' },
+    { name: 'About', href: '#' },
+    { name: 'Services', href: '#' },
+    { name: 'Contact Us', href: '#' },  
 ]
 const HeadPage = () => {
     return (
