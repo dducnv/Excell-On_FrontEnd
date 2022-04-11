@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Switch } from '@headlessui/react'
 import { useTheme } from 'next-themes'
 import { MoonIcon, SunIcon, SearchIcon } from '@heroicons/react/outline'
@@ -33,14 +33,14 @@ export const Navbar = () => {
           </div>
           <div className='flex items-center'>
             <button className='mr-1 p-3 hover:bg-gray-100 rounded dark:hover:bg-gray-700' onClick={handleClick}>
-             {theme==="dark"?
-                <SunIcon className='w-6 h-6 text-gray-400'/>: <MoonIcon className='w-6 h-6 text-gray-400'/>
-             }
+              {theme == "dark" ?
+                <SunIcon className='w-6 h-6 text-gray-400' /> : <MoonIcon className='w-6 h-6 text-gray-400' />
+              }
             </button>
             <button className='mr-1 p-3 hover:bg-gray-100 rounded dark:hover:bg-gray-700'>
-             
-                <SearchIcon className='w-6 h-6 text-gray-400'/>
-        
+
+              <SearchIcon className='w-6 h-6 text-gray-400' />
+
             </button>
             <a href="#" className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
               Sign in

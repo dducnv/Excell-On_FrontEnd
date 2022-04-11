@@ -1,10 +1,6 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
 import HeadPage from '../components/user_layout/HeadPage'
 import Layout from '../components/user_layout/Layout'
 import { AnnotationIcon, GlobeAltIcon, LightningBoltIcon, ScaleIcon } from '@heroicons/react/outline'
-
 
 const features = [
   {
