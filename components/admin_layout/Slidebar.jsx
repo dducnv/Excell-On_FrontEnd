@@ -1,6 +1,7 @@
 import React from 'react'
 import { Disclosure } from '@headlessui/react'
-import { ChevronUpIcon,ChartPieIcon,PresentationChartLineIcon } from '@heroicons/react/outline'
+import { ChevronUpIcon, ChartPieIcon, PresentationChartLineIcon,CurrencyDollarIcon,
+    ShoppingBagIcon,ShoppingCartIcon,UserGroupIcon,UsersIcon,HomeIcon,PhotographIcon,UserCircleIcon} from '@heroicons/react/outline'
 
 export const Slidebar = () => {
     return (
@@ -9,14 +10,14 @@ export const Slidebar = () => {
                 <div>
                     <div className="-mx-6 px-6 py-4">
                         <a href="#" title="home">
-                            <img src="https://tailus.io/sources/blocks/stats-cards/preview/images/logo.svg" className="w-32" alt="tailus logo" />
+                            <n src="https://tailus.io/sources/blocks/stats-cards/preview/images/logo.svg" className="w-32" alt="tailus logo" />
                         </a>
                     </div>
                     <ul className="space-y-2">
                         <li>
                             <a href="#"
                                 className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                                <ChartPieIcon className='w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white'/>
+                                <ChartPieIcon className='w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white' />
                                 <span className="ml-3">Dashboard</span>
                             </a>
                         </li>
@@ -27,7 +28,7 @@ export const Slidebar = () => {
                                         <Disclosure.Button className="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
                                             <a href="#"
                                                 className="flex items-center text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                                                 <PresentationChartLineIcon className='w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white'/>
+                                                <PresentationChartLineIcon className='w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white' />
                                                 <span className="flex-1 ml-3 text-left whitespace-nowrap" sidebar-toggle-item>Service</span>
                                             </a>
                                             <ChevronUpIcon
@@ -54,6 +55,62 @@ export const Slidebar = () => {
                                     </>
                                 )}
                             </Disclosure>
+                        </li>
+                        <li>
+                            <a href="#"
+                                className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                <CurrencyDollarIcon className='w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white' />
+                                <span className="ml-3">Money</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                <ShoppingBagIcon className='w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white' />
+                                <span className="ml-3">Order Detail</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                <ShoppingCartIcon className='w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white' />
+                                <span className="ml-3">Oder</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                <UserGroupIcon className='w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white' />
+                                <span className="ml-3">Staff</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                <UsersIcon className='w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white' />
+                                <span className="ml-3">Customer</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                <HomeIcon className='w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white' />
+                                <span className="ml-3">Company</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                <PhotographIcon className='w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white' />
+                                <span className="ml-3">Image</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                <UserCircleIcon className='w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white' />
+                                <span className="ml-3">My Profile</span>
+                            </a>
                         </li>
                     </ul>
                 </div>

@@ -2,11 +2,114 @@ import React from 'react'
 import Navbar from '../../components/admin_layout/Navbar';
 import Slidebar from '../../components/admin_layout/Slidebar';
 import Layout from '../../components/admin_layout/Layout';
+import {ShoppingBagIcon,ShoppingCartIcon,ShieldCheckIcon,UserGroupIcon,UsersIcon} from '@heroicons/react/outline'
 const dashboard = () => {
     return (
         <Layout>
             <div className="px-6 pt-6 2xl:container">
+                <div className="container mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 pt-6 gap-8">
+                    <div  className="rounded border-gray-300  dark:border-gray-700 border-dashed ">
+                        <div className="shadow rounded-lg py-3 px-6 bg-white">
+                            <div className="flex flex-row justify-between items-center">
+                                <div>
+                                    <h4>New Oder</h4> 
+                                    <h4 className="text-black text-3xl font-bold text-left">10</h4>
+                                </div>
+                                <div>
+                                <ShoppingBagIcon className='w-12 h-12 text-teal-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white' />
+                                </div>
+                            </div>
+                            <div className="text-left flex flex-row justify-start items-center">
+                                <span className="mr-1">
+                                <ShoppingBagIcon className='w-5 h-5 text-teal-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white' />
+                                </span>
+                                <p><span className="text-teal-500 font-bold">34.58%</span> Excell On Company</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="rounded border-gray-300  dark:border-gray-700 border-dashed ">
+                        <div className="shadow rounded-lg py-3 px-5 bg-white">
+                            <div className="flex flex-row justify-between items-center">
+                                <div>
+                                    <h4>Order</h4> 
+                                    <h4 className="text-black text-3xl font-bold text-left">3</h4>
+                                </div>
+                                <div>
+                                <ShoppingCartIcon className='w-12 h-12 text-teal-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white' />
+                                </div>
+                            </div>
+                            <div className="text-left flex flex-row justify-start items-center">
+                            <ShoppingCartIcon className='w-5 h-5 text-teal-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white' />
+                                <p><span className="text-teal-500 font-bold"> 45,22</span> Excell On Company</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="container mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 pt-6 gap-8 mb-5">    
+                    <div className="rounded border-gray-300  dark:border-gray-700 border-dashed ">
+                        <div className="shadow rounded-lg py-3 px-5 bg-white">
+                            <div className="flex flex-row justify-between items-center">
+                                <div>
+                                    <h4>Order Completed</h4> 
+                                    <h4 className="text-black text-3xl font-bold text-left">3</h4>
+                                </div>
+                                <div>
+                                <ShieldCheckIcon className='w-12 h-12 text-teal-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white' />
+                                </div>
+                            </div>
+                            <div className="text-left flex flex-row justify-start items-center">
+                                <span className="mr-1">
+                                <ShieldCheckIcon className='w-5 h-5 text-teal-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white' />
+                                </span>
+                                <p><span className="text-teal-500 font-bold">lIKE</span> Excell On Company</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="rounded border-gray-300  dark:border-gray-700 border-dashed ">
+                        <div className="shadow rounded-lg py-3 px-6 bg-white">
+                            <div className="flex flex-row justify-between items-center">
+                                <div>
+                                    <h4>Staff</h4> 
+                                    <h4 className="text-black text-3xl font-bold text-left">5</h4>
+                                </div>
+                                <div>
+                                <UserGroupIcon className='w-12 h-12 text-teal-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white' />
+
+                                </div>
+                            </div>
+                            <div className="text-left flex flex-row justify-start items-center">
+                                <span className="mr-1">
+                                <UserGroupIcon className='w-5 h-5 text-teal-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white' />
+
+                                </span>
+                                <p><span className="text-teal-500 font-bold">34.58%</span> Excell On Company</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="rounded border-gray-300  dark:border-gray-700 border-dashed ">
+                        <div className="shadow rounded-lg py-3 px-5 bg-white">
+                            <div className="flex flex-row justify-between items-center">
+                                <div>
+                                    <h4>Customer</h4> 
+                                    <h4 className="text-black text-3xl font-bold text-left">3</h4>
+                                </div>
+                                <div>
+                                <UsersIcon className='w-12 h-12 text-teal-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white' />
+
+                                </div>
+                            </div>
+                            <div className="text-left flex flex-row justify-start items-center">
+                                <span className="mr-1">
+                                <UsersIcon className='w-5 h-5 text-teal-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white' />
+
+                                </span>
+                                <p><span className="text-teal-500 font-bold">lIKE</span> Excell On Company</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 
+
                 <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                     <div className="md:col-span-2 lg:col-span-1" >
                         <div className="h-full py-8 px-6 space-y-6 rounded-xl border border-gray-200 bg-white">
