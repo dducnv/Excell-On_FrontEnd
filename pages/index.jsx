@@ -84,7 +84,7 @@ export default function Home() {
                     <p className="text-2xl md:mt-0 mt-4 font-semibold leading-6 text-gray-800"></p>
                     <p className="text-2xl font-semibold md:mt-0 mt-4 leading-6 dark:text-gray-100 text-gray-800">4500$</p>
                   </div>
-                  <p className="md:w-80 text-base leading-6 mt-4 dark:text-gray-200 text-gray-800">The In-bound service is a service in which one can only receive the calls from the customers. These call centers provide 24 hours
+                  <p className=" text-base leading-6 mt-4 dark:text-gray-200 text-gray-800">The In-bound service is a service in which one can only receive the calls from the customers. These call centers provide 24 hours
                     service to all customers. The primary goal of these call centers are to receive product orders, help customers both technically and
                     non-technically, to find dealer location</p>
                 </div>
@@ -97,7 +97,7 @@ export default function Home() {
                         <p className="text-2xl font-semibold md:mt-0 mt-4 leading-6 dark:text-gray-100 text-gray-800">6000$</p>
                       </p>
                     </div>
-                    <p className="md:w-80 text-base leading-6 mt-4 dark:text-gray-200 text-gray-800">The Out-bound service is a service in which the employees of Excell-on call the customers for product promotions, for checking
+                    <p className=" text-base leading-6 mt-4 dark:text-gray-200 text-gray-800">The Out-bound service is a service in which the employees of Excell-on call the customers for product promotions, for checking
                       with the customer satisfaction on the services they provide, and for the telemarketing. Outbound Call Centers depends on the
                       technological solutions, extensive experience, quality assurance programns and commitment to customer service excellence
                       that further ensures maximum results from the direct marketing efforts for its success</p>
@@ -110,7 +110,7 @@ export default function Home() {
                       <p className="text-2xl font-semibold md:mt-0 mt-4 leading-6 dark:text-gray-200 text-gray-800">5500$</p>
                     </p>
                   </div>
-                  <p className="md:w-80 text-base leading-6 mt-4 dark:text-gray-200 text-gray-800">The Tele Marketing service is a service which is purely for the promotion of marketing or sales of the products and services
+                  <p className="text-base leading-6 mt-4 dark:text-gray-200 text-gray-800">The Tele Marketing service is a service which is purely for the promotion of marketing or sales of the products and services
                   </p>
                 </div>
               </div>
