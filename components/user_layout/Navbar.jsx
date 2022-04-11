@@ -10,7 +10,7 @@ export const Navbar = () => {
   }
   return (
     <>
-      <nav className="bg-white border-gray-400 px-2 sm:px-4 py-2.5 fixed z-40 w-full dark:bg-gray-800">
+      <nav className="bg-white border-gray-400 px-2 md:px-6 py-2.5 fixed z-40 w-full dark:bg-gray-800">
         <div className="container flex flex-wrap justify-between items-center mx-auto">
           <div className='flex '>
             <a href="https://flowbite.com" className="flex items-center mr-10">
