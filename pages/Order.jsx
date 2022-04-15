@@ -18,9 +18,9 @@ const Order = () => {
                                     <img className="w-full hidden md:block dark:brightness-75" src="https://image.shutterstock.com/z/stock-vector-vector-linear-illustration-dark-background-service-trend-578745856.jpg" alt="dress" />
                                     <img className="w-full md:hidden dark:brightness-75" src="https://image.shutterstock.com/z/stock-vector-vector-linear-illustration-dark-background-service-trend-578745856.jpg" alt="dress" />
                                 </div>
-                                <div className="border-b border-gray-200 md:flex-row flex-col flex justify-between items-start w-full  pb-8 space-y-4 md:space-y-0">
+                                <div className="border-b border-gray-400 md:flex-row flex-col flex justify-between items-start w-full pb-8 space-y-4 md:space-y-0">
                                     <div className="w-full Text-black dark:text-gray-400 flex flex-col justify-start items-start space-y-8">
-                                        <h3 className="text-xl  xl:text-2xl font-semibold leading-6">Premium Quaility Dress</h3>
+                                        <h3 className="text-xl  xl:text-2xl font-semibold leading-6">Premium Service 1</h3>
                                         <div className="flex justify-start items-start flex-col space-y-2">
                                             <p className="text-sm leading-none Text-black">
                                                 <span className="Text-black font-semibold">Style: </span> Italic Minimal Design
@@ -35,21 +35,21 @@ const Order = () => {
                                     </div>
                                     <div className="flex justify-between space-x-8 items-start w-full">
                                         <p className="text-base xl:text-lg leading-6">
-                                            $36.00 <span className="text-red-500 dark:text-red-300 line-through"> $45.00</span>
+                                        $150.00 <span className="text-red-500 dark:text-red-300 line-through"> $245.00</span>
                                         </p>
                                         <p className="text-base xl:text-lg leading-6 Text-black">03</p>
-                                        <p className="text-base xl:text-lg font-semibold leading-6 Text-black">$36.00</p>
+                                        <p className="text-base xl:text-lg font-semibold leading-6 Text-black">$450.00</p>
                                     </div>
                                 </div>
                             </div>
                             <div className="mt-6 md:mt-0 flex justify-start flex-col md:flex-row  items-start md:items-center space-y-4  md:space-x-6 xl:space-x-8 w-full ">
                                 <div className="w-full md:w-40">
-                                    <img className="w-full hidden md:block dark:brightness-75" src="https://image.shutterstock.com/z/stock-vector-linear-illustration-for-presentations-on-blue-background-service-591187340.jpg" alt="dress" />
+                                    <img className="w-full hidden md:block dark:brightness-75" src="https://image.shutterstock.com/z/stock-52vector-linear-illustration-for-presentations-on-blue-background-service-591187340.jpg" alt="dress" />
                                     <img className="w-full md:hidden dark:brightness-75" src="https://image.shutterstock.com/z/stock-vector-linear-illustration-for-presentations-on-blue-background-service-591187340.jpg" alt="dress" />
                                 </div>
                                 <div className="  flex justify-between items-start w-full flex-col md:flex-row space-y-4 md:space-y-0  ">
                                     <div className="w-full flex flex-col justify-start items-start space-y-8">
-                                        <h3 className="text-xl xl:text-2xl font-semibold leading-6 Text-black">High Quaility Italic Dress</h3>
+                                        <h3 className="text-xl xl:text-2xl font-semibold leading-6 Text-black">Average Service </h3>
                                         <div className="flex justify-start items-start flex-col space-y-2">
                                             <p className="text-sm leading-none Text-black">
                                                 <span className="Text-black font-semibold">Style: </span> Italic Minimal Design
@@ -64,10 +64,10 @@ const Order = () => {
                                     </div>
                                     <div className="flex justify-between space-x-8 items-start w-full">
                                         <p className="text-base xl:text-lg leading-6">
-                                            $20.00 <span className="text-red-500 dark:text-red-300 line-through"> $30.00</span>
+                                        $53.00 <span className="text-red-500 dark:text-red-300 line-through"> $94.00</span>
                                         </p>
-                                        <p className="text-base xl:text-lg leading-6 Text-black">07</p>
-                                        <p className="text-base xl:text-lg font-semibold leading-6 Text-black">$20.00</p>
+                                        <p className="text-base xl:text-lg leading-6 Text-black">05</p>
+                                        <p className="text-base xl:text-lg font-semibold leading-6 Text-black">$265.00</p>
                                     </div>
                                 </div>
                             </div>
