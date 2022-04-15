@@ -4,7 +4,7 @@ import Layout from '../components/user_layout/Layout'
 const Order = () => {
     return (
         <Layout>
-            <div className="pt-24 pb-12 md:px-6 Text-black dark:text-gray-400 dark:bg-gray-700 2xl:px-20 2xl:container 2xl:mx-auto">
+            <div className="pt-24 pb-12 md:px-6 Text-black bg-gray-200 dark:text-gray-400 dark:bg-gray-700 2xl:px-20 2xl:container 2xl:mx-auto">
                 <div className="flex justify-start item-start space-y-2 flex-col ">
                     <h1 className="text-3xl lg:text-4xl font-semibold leading-7 lg:leading-9  Text-black dark:text-gray-400">Order service</h1>
                     <p className="text-base font-medium leading-6 text-gray-600 dark:text-gray-400">Service online</p>
@@ -15,8 +15,8 @@ const Order = () => {
                             <p className="text-lg dark:text-gray-400     md:text-xl font-semibold leading-6 xl:leading-5 Text-black">Customer’s Cart</p>
                             <div className="mt-4 md:mt-6 flex  flex-col md:flex-row justify-start items-start md:items-center md:space-x-6 xl:space-x-8 w-full ">
                                 <div className="pb-4 md:pb-8 w-full md:w-40">
-                                    <img className="w-full hidden md:block" src="https://image.shutterstock.com/z/stock-vector-vector-linear-illustration-dark-background-service-trend-578745856.jpg" alt="dress" />
-                                    <img className="w-full md:hidden" src="https://image.shutterstock.com/z/stock-vector-vector-linear-illustration-dark-background-service-trend-578745856.jpg" alt="dress" />
+                                    <img className="w-full hidden md:block dark:brightness-75" src="https://image.shutterstock.com/z/stock-vector-vector-linear-illustration-dark-background-service-trend-578745856.jpg" alt="dress" />
+                                    <img className="w-full md:hidden dark:brightness-75" src="https://image.shutterstock.com/z/stock-vector-vector-linear-illustration-dark-background-service-trend-578745856.jpg" alt="dress" />
                                 </div>
                                 <div className="border-b border-gray-200 md:flex-row flex-col flex justify-between items-start w-full  pb-8 space-y-4 md:space-y-0">
                                     <div className="w-full Text-black dark:text-gray-400 flex flex-col justify-start items-start space-y-8">
@@ -44,8 +44,8 @@ const Order = () => {
                             </div>
                             <div className="mt-6 md:mt-0 flex justify-start flex-col md:flex-row  items-start md:items-center space-y-4  md:space-x-6 xl:space-x-8 w-full ">
                                 <div className="w-full md:w-40">
-                                    <img className="w-full hidden md:block" src="https://image.shutterstock.com/z/stock-vector-linear-illustration-for-presentations-on-blue-background-service-591187340.jpg" alt="dress" />
-                                    <img className="w-full md:hidden" src="https://image.shutterstock.com/z/stock-vector-linear-illustration-for-presentations-on-blue-background-service-591187340.jpg" alt="dress" />
+                                    <img className="w-full hidden md:block dark:brightness-75" src="https://image.shutterstock.com/z/stock-vector-linear-illustration-for-presentations-on-blue-background-service-591187340.jpg" alt="dress" />
+                                    <img className="w-full md:hidden dark:brightness-75" src="https://image.shutterstock.com/z/stock-vector-linear-illustration-for-presentations-on-blue-background-service-591187340.jpg" alt="dress" />
                                 </div>
                                 <div className="  flex justify-between items-start w-full flex-col md:flex-row space-y-4 md:space-y-0  ">
                                     <div className="w-full flex flex-col justify-start items-start space-y-8">
@@ -124,7 +124,7 @@ const Order = () => {
                         <div className="flex  flex-col md:flex-row xl:flex-col justify-start items-stretch h-full w-full md:space-x-6 lg:space-x-8 xl:space-x-0 ">
                             <div className="flex flex-col justify-start items-start flex-shrink-0">
                                 <div className="flex justify-center  w-full  md:justify-start items-center space-x-4 py-8 border-b border-gray-200">
-                                    <img className='w-10 h-10' src="https://dttc.site/wp-content/uploads/2021/03/CNDT-1-1.jpg" alt="avatar" />
+                                    <img className='w-10 h-10 dark:brightness-75' src="https://dttc.site/wp-content/uploads/2021/03/CNDT-1-1.jpg" alt="avatar" />
                                     <div className=" flex justify-start items-start flex-col space-y-2">
                                         <p className="text-base font-semibold leading-4 text-left Text-black">BENJAMIN FRANKLIN</p>
                                         <p className="text-sm leading-5 text-gray-600">10 Previous Orders</p>
