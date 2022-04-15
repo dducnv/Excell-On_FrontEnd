@@ -91,9 +91,6 @@ export const adduser = () => {
           </div>
         </div>
       </div>
-
-
-
     </Layout>
   )
 }

@@ -1,45 +1,44 @@
 import React from 'react'
-import Navbar from '../../components/admin_layout/Navbar';
-import Slidebar from '../../components/admin_layout/Slidebar';
 import Layout from '../../components/admin_layout/Layout';
 import { ShoppingBagIcon, ShoppingCartIcon, ShieldCheckIcon, UserGroupIcon, UsersIcon } from '@heroicons/react/outline'
+
 const dashboard = () => {
     return (
         <Layout>
-            <div className="px-6 pt-6 2xl:container">
+            <div className="px-6 pt-6 2xl:container   bg-white dark:bg-gray-800">
                 <div className="container mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 pt-6 gap-8">
                     <div className="rounded border-gray-300  dark:border-gray-700 border-dashed ">
-                        <div className="shadow rounded-lg py-3 px-6 bg-white">
+                        <div className=" shadow hover:shadow-xl cursor-pointer rounded-lg py-3 px-6 bg-white dark:bg-gray-800 border dark:border-gray-200">
                             <div className="flex flex-row justify-between items-center">
                                 <div>
-                                    <h4>New Oder</h4>
-                                    <h4 className="text-black text-3xl font-bold text-left">10</h4>
+                                    <h4 className="dark:text-slate-50 text-gray-800">New Oder</h4>
+                                    <h4 className="dark:text-slate-50 text-gray-800 text-3xl font-bold text-left">10</h4>
                                 </div>
                                 <div>
-                                    <ShoppingBagIcon className='w-12 h-12 text-teal-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white' />
+                                    <ShoppingBagIcon className='w-12 h-12 text-teal-500 transition duration-75 dark:text-gray-100 group-hover:text-gray-900 dark:group-hover:text-white' />
                                 </div>
                             </div>
                             <div className="text-left flex flex-row justify-start items-center">
                                 <span className="mr-1">
-                                    <ShoppingBagIcon className='w-5 h-5 text-teal-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white' />
+                                    <ShoppingBagIcon className='w-5 h-5 text-teal-500 transition duration-75 dark:text-gray-100 group-hover:text-gray-900 dark:group-hover:text-white' />
                                 </span>
                                 <p><span className="text-teal-500 font-bold">34.58%</span> Excell On Company</p>
                             </div>
                         </div>
                     </div>
                     <div className="rounded border-gray-300  dark:border-gray-700 border-dashed ">
-                        <div className="shadow rounded-lg py-3 px-5 bg-white">
+                        <div className="shadow hover:shadow-xl cursor-pointer rounded-lg py-3 px-5 bg-white dark:bg-gray-800 border dark:border-gray-200">
                             <div className="flex flex-row justify-between items-center">
                                 <div>
-                                    <h4>Order</h4>
-                                    <h4 className="text-black text-3xl font-bold text-left">3</h4>
+                                    <h4 className="dark:text-slate-50 text-gray-800">Order</h4>
+                                    <h4 className="dark:text-slate-50 text-gray-800 text-3xl font-bold text-left">3</h4>
                                 </div>
                                 <div>
-                                    <ShoppingCartIcon className='w-12 h-12 text-teal-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white' />
+                                    <ShoppingCartIcon className='w-12 h-12 text-teal-500 transition duration-75 dark:text-gray-100 group-hover:text-gray-900 dark:group-hover:text-white' />
                                 </div>
                             </div>
                             <div className="text-left flex flex-row justify-start items-center">
-                                <ShoppingCartIcon className='w-5 h-5 text-teal-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white' />
+                                <ShoppingCartIcon className='w-5 h-5 text-teal-500 transition duration-75 dark:text-gray-100 group-hover:text-gray-900 dark:group-hover:text-white' />
                                 <p><span className="text-teal-500 font-bold"> 45,22</span> Excell On Company</p>
                             </div>
                         </div>
@@ -47,39 +46,39 @@ const dashboard = () => {
                 </div>
                 <div className="container mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 pt-6 gap-8 mb-5">
                     <div className="rounded border-gray-300  dark:border-gray-700 border-dashed ">
-                        <div className="shadow rounded-lg py-3 px-5 bg-white">
+                        <div className="shadow hover:shadow-xl cursor-pointer rounded-lg py-3 px-5 bg-white dark:bg-gray-800 border dark:border-gray-200">
                             <div className="flex flex-row justify-between items-center">
                                 <div>
-                                    <h4>Order Completed</h4>
-                                    <h4 className="text-black text-3xl font-bold text-left">3</h4>
+                                    <h4 className="dark:text-slate-50 text-gray-800">Order Completed</h4>
+                                    <h4 className="dark:text-slate-50 text-gray-800 text-3xl font-bold text-left">3</h4>
                                 </div>
                                 <div>
-                                    <ShieldCheckIcon className='w-12 h-12 text-teal-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white' />
+                                    <ShieldCheckIcon className='w-12 h-12 text-teal-500 transition duration-75 dark:text-gray-100 group-hover:text-gray-900 dark:group-hover:text-white' />
                                 </div>
                             </div>
                             <div className="text-left flex flex-row justify-start items-center">
                                 <span className="mr-1">
-                                    <ShieldCheckIcon className='w-5 h-5 text-teal-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white' />
+                                    <ShieldCheckIcon className='w-5 h-5 text-teal-500 transition duration-75 dark:text-gray-100 group-hover:text-gray-900 dark:group-hover:text-white' />
                                 </span>
                                 <p><span className="text-teal-500 font-bold">lIKE</span> Excell On Company</p>
                             </div>
                         </div>
                     </div>
                     <div className="rounded border-gray-300  dark:border-gray-700 border-dashed ">
-                        <div className="shadow rounded-lg py-3 px-6 bg-white">
+                        <div className="shadow hover:shadow-xl cursor-pointer rounded-lg py-3 px-6 bg-white dark:bg-gray-800 border dark:border-gray-200">
                             <div className="flex flex-row justify-between items-center">
                                 <div>
-                                    <h4>Staff</h4>
-                                    <h4 className="text-black text-3xl font-bold text-left">5</h4>
+                                    <h4 className="dark:text-slate-50 text-gray-800">Staff</h4>
+                                    <h4 className="dark:text-slate-50 text-gray-800 text-3xl font-bold text-left">5</h4>
                                 </div>
                                 <div>
-                                    <UserGroupIcon className='w-12 h-12 text-teal-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white' />
+                                    <UserGroupIcon className='w-12 h-12 text-teal-500 transition duration-75 dark:text-gray-100 group-hover:text-gray-900 dark:group-hover:text-white' />
 
                                 </div>
                             </div>
-                            <div className="text-left flex flex-row justify-start items-center">
+                            <div className="text-left flex flex-row justify-start items-center ">
                                 <span className="mr-1">
-                                    <UserGroupIcon className='w-5 h-5 text-teal-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white' />
+                                    <UserGroupIcon className='w-5 h-5 text-teal-500 transition duration-75 dark:text-gray-100 group-hover:text-gray-900 dark:group-hover:text-white' />
 
                                 </span>
                                 <p><span className="text-teal-500 font-bold">34.58%</span> Excell On Company</p>
@@ -87,20 +86,20 @@ const dashboard = () => {
                         </div>
                     </div>
                     <div className="rounded border-gray-300  dark:border-gray-700 border-dashed ">
-                        <div className="shadow rounded-lg py-3 px-5 bg-white">
+                        <div className="shadow hover:shadow-xl cursor-pointer rounded-lg py-3 px-5 bg-white dark:bg-gray-800 border dark:border-gray-200">
                             <div className="flex flex-row justify-between items-center">
                                 <div>
-                                    <h4>Customer</h4>
-                                    <h4 className="text-black text-3xl font-bold text-left">3</h4>
+                                    <h4 className="dark:text-slate-50 text-gray-800">Customer</h4>
+                                    <h4 className="dark:text-slate-50 text-gray-800 text-3xl font-bold text-left">3</h4>
                                 </div>
                                 <div>
-                                    <UsersIcon className='w-12 h-12 text-teal-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white' />
+                                    <UsersIcon className='w-12 h-12 text-teal-500 transition duration-75 dark:text-gray-100 group-hover:text-gray-900 dark:group-hover:text-white' />
 
                                 </div>
                             </div>
                             <div className="text-left flex flex-row justify-start items-center">
                                 <span className="mr-1">
-                                    <UsersIcon className='w-5 h-5 text-teal-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white' />
+                                    <UsersIcon className='w-5 h-5 text-teal-500 transition duration-75 dark:text-gray-100 group-hover:text-gray-900 dark:group-hover:text-white' />
 
                                 </span>
                                 <p><span className="text-teal-500 font-bold">lIKE</span> Excell On Company</p>
@@ -111,7 +110,7 @@ const dashboard = () => {
                 <div className="px-6 pt-6 2xl:container">
                     <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                         <div className="md:col-span-2 lg:col-span-1" >
-                            <div className="h-full py-8 px-6 space-y-6 rounded-xl border border-gray-200 bg-white">
+                            <div className="h-full py-8 px-6 space-y-6 rounded-xl border border-gray-200 bg-white dark:bg-gray-800">
                                 <svg className="w-40 m-auto opacity-75" viewBox="0 0 146 146" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M73.1866 5.7129C81.999 5.7129 90.725 7.44863 98.8666 10.821C107.008 14.1933 114.406 19.1363 120.637 25.3675C126.868 31.5988 131.811 38.9964 135.184 47.138C138.556 55.2796 140.292 64.0057 140.292 72.818C140.292 81.6304 138.556 90.3565 135.184 98.4981C131.811 106.64 126.868 114.037 120.637 120.269C114.406 126.5 107.008 131.443 98.8666 134.815C90.725 138.187 81.999 139.923 73.1866 139.923C64.3742 139.923 55.6481 138.187 47.5066 134.815C39.365 131.443 31.9674 126.5 25.7361 120.269C19.5048 114.037 14.5619 106.64 11.1895 98.4981C7.81717 90.3565 6.08144 81.6304 6.08144 72.818C6.08144 64.0057 7.81717 55.2796 11.1895 47.138C14.5619 38.9964 19.5048 31.5988 25.7361 25.3675C31.9674 19.1363 39.365 14.1933 47.5066 10.821C55.6481 7.44863 64.3742 5.7129 73.1866 5.7129L73.1866 5.7129Z" stroke="#e4e4f2" strokeWidth="4.89873" />
                                     <path d="M73.5 23.4494C79.9414 23.4494 86.3198 24.7181 92.2709 27.1831C98.222 29.6482 103.629 33.2612 108.184 37.816C112.739 42.3707 116.352 47.778 118.817 53.7291C121.282 59.6802 122.551 66.0586 122.551 72.5C122.551 78.9414 121.282 85.3198 118.817 91.2709C116.352 97.222 112.739 102.629 108.184 107.184C103.629 111.739 98.222 115.352 92.2709 117.817C86.3198 120.282 79.9414 121.551 73.5 121.551C67.0586 121.551 60.6802 120.282 54.7291 117.817C48.778 115.352 43.3707 111.739 38.816 107.184C34.2612 102.629 30.6481 97.222 28.1831 91.2709C25.7181 85.3198 24.4494 78.9414 24.4494 72.5C24.4494 66.0586 25.7181 59.6802 28.1831 53.7291C30.6481 47.778 34.2612 42.3707 38.816 37.816C43.3707 33.2612 48.778 29.6481 54.7291 27.1831C60.6802 24.7181 67.0586 23.4494 73.5 23.4494L73.5 23.4494Z" stroke="#e4e4f2" strokeWidth="4.89873" />
@@ -141,9 +140,9 @@ const dashboard = () => {
                                     </defs>
                                 </svg>
                                 <div>
-                                    <h5 className="text-xl text-gray-600 text-center">Global Activities</h5>
+                                    <h5 className="text-xl dark:text-slate-50 text-gray-800 text-center">Global Activities</h5>
                                     <div className="mt-2 flex justify-center gap-4">
-                                        <h3 className="text-3xl font-bold text-gray-700">$23,988</h3>
+                                        <h3 className="text-3xl font-bold dark:text-slate-50 text-gray-800">$23,988</h3>
                                         <div className="flex items-end gap-1 text-green-500">
                                             <svg className="w-3" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M6.00001 0L12 8H-3.05176e-05L6.00001 0Z" fill="currentColor" />
@@ -151,13 +150,13 @@ const dashboard = () => {
                                             <span>2%</span>
                                         </div>
                                     </div>
-                                    <span className="block text-center text-gray-500">Compared to last week $13,988</span>
+                                    <span className="block text-center dark:text-slate-50 text-gray-800">Compared to last week $13,988</span>
                                 </div>
                                 <table className="w-full text-gray-600">
                                     <tbody>
                                         <tr>
-                                            <td className="py-2">Tailored ui</td>
-                                            <td className="text-gray-500">896</td>
+                                            <td className="dark:text-slate-50 text-gray-800">Tailored ui</td>
+                                            <td className="dark:text-slate-50 text-gray-800">896</td>
                                             <td>
                                                 <svg className="w-16 ml-auto" viewBox="0 0 68 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <rect opacity="0.4" width="17" height="21" rx="1" fill="#e4e4f2" />
@@ -175,8 +174,8 @@ const dashboard = () => {
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td className="py-2">Customize</td>
-                                            <td className="text-gray-500">1200</td>
+                                            <td className="py-2 dark:text-slate-50 text-gray-800">Customize</td>
+                                            <td className="dark:text-slate-50 text-gray-800">1200</td>
                                             <td>
                                                 <svg className="w-16 ml-auto" viewBox="0 0 68 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <rect opacity="0.4" width="17" height="21" rx="1" fill="#e4e4f2" />
@@ -194,8 +193,8 @@ const dashboard = () => {
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td className="py-2">Other</td>
-                                            <td className="text-gray-500">12</td>
+                                            <td className="py-2 dark:text-slate-50 text-gray-800">Other</td>
+                                            <td className=" dark:text-slate-50 text-gray-800">12</td>
                                             <td>
                                                 <svg className="w-16 ml-auto" viewBox="0 0 68 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <rect opacity="0.4" width="17" height="21" rx="1" fill="#e4e4f2" />
@@ -217,11 +216,11 @@ const dashboard = () => {
                             </div>
                         </div>
                         <div>
-                            <div className="h-full py-6 px-6 rounded-xl border border-gray-200 bg-white">
-                                <h5 className="text-xl text-gray-700">Downloads</h5>
+                            <div className="h-full py-6 px-6 rounded-xl border border-gray-200 bg-white dark:bg-gray-800">
+                                <h5 className="text-xl dark:text-slate-50 text-gray-800">Downloads</h5>
                                 <div className="my-8">
-                                    <h1 className="text-5xl font-bold text-gray-800">64,5%</h1>
-                                    <span className="text-gray-500">Compared to last week $13,988</span>
+                                    <h1 className="text-5xl font-bold dark:text-slate-50 text-gray-800">64,5%</h1>
+                                    <span className="dark:text-slate-50 text-gray-800">Compared to last week $13,988</span>
                                 </div>
                                 <svg className="w-full" viewBox="0 0 218 69" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M0 67.5C27.8998 67.5 24.6002 15 52.5 15C80.3998 15 77.1002 29 105 29C132.9 29 128.6 52 156.5 52C184.4 52 189.127 63.8158 217.027 63.8158" stroke="url(#paint0_linear_622:13664)" strokeWidth="3" strokeLinecap="round" />
@@ -240,8 +239,8 @@ const dashboard = () => {
                                 <table className="mt-6 -mb-2 w-full text-gray-600">
                                     <tbody>
                                         <tr>
-                                            <td className="py-2">From new users</td>
-                                            <td className="text-gray-500">896</td>
+                                            <td className="py-2 dark:text-slate-50 text-gray-800 ">From new users</td>
+                                            <td className="dark:text-slate-50 text-gray-800">896</td>
                                             <td>
                                                 <svg className="w-16 ml-auto" viewBox="0 0 68 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <rect opacity="0.4" width="17" height="21" rx="1" fill="#e4e4f2" />
@@ -259,8 +258,8 @@ const dashboard = () => {
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td className="py-2">From old users</td>
-                                            <td className="text-gray-500">1200</td>
+                                            <td className="py-2 dark:text-slate-50 text-gray-800">From old users</td>
+                                            <td className="dark:text-slate-50 text-gray-800">1200</td>
                                             <td>
                                                 <svg className="w-16 ml-auto" viewBox="0 0 68 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <rect opacity="0.4" width="17" height="21" rx="1" fill="#e4e4f2" />
@@ -282,7 +281,7 @@ const dashboard = () => {
                             </div>
                         </div>
                         <div>
-                            <div className="lg:h-full py-8 px-6 text-gray-600 rounded-xl border border-gray-200 bg-white">
+                            <div className="lg:h-full py-8 px-6 text-gray-600 rounded-xl border border-gray-200 bg-white dark:bg-gray-800">
                                 <svg className="w-40 m-auto" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M27.9985 2.84071C31.2849 2.84071 34.539 3.488 37.5752 4.74562C40.6113 6.00324 43.3701 7.84657 45.6938 10.1703C48.0176 12.4941 49.861 15.2529 51.1186 18.289C52.3762 21.3252 53.0235 24.5793 53.0235 27.8657C53.0235 31.152 52.3762 34.4061 51.1186 37.4423C49.861 40.4785 48.0176 43.2372 45.6938 45.561C43.3701 47.8848 40.6113 49.7281 37.5752 50.9857C34.539 52.2433 31.2849 52.8906 27.9985 52.8906C24.7122 52.8906 21.4581 52.2433 18.4219 50.9857C15.3857 49.7281 12.627 47.8848 10.3032 45.561C7.97943 43.2372 6.1361 40.4785 4.87848 37.4423C3.62086 34.4061 2.97357 31.152 2.97357 27.8657C2.97357 24.5793 3.62086 21.3252 4.87848 18.289C6.13611 15.2529 7.97943 12.4941 10.3032 10.1703C12.627 7.84656 15.3857 6.00324 18.4219 4.74562C21.4581 3.488 24.7122 2.84071 27.9985 2.84071L27.9985 2.84071Z" stroke="#e4e4f2" strokeWidth="3" />
                                     <path d="M27.301 2.50958C33.0386 2.35225 38.6614 4.13522 43.26 7.57004C47.8585 11.0049 51.1637 15.8907 52.641 21.437C54.1182 26.9834 53.6811 32.8659 51.4002 38.133C49.1194 43.4001 45.1283 47.7437 40.0726 50.4611C35.0169 53.1785 29.1923 54.1108 23.541 53.1071C17.8897 52.1034 12.7423 49.2225 8.93145 44.9305C5.12062 40.6384 2.86926 35.1861 2.54159 29.4558C2.21391 23.7254 3.82909 18.0521 7.12582 13.3536" stroke="url(#paint0_linear_622:13696)" strokeWidth="5" strokeLinecap="round" />
@@ -297,9 +296,9 @@ const dashboard = () => {
                                     </defs>
                                 </svg>
                                 <div className="mt-6">
-                                    <h5 className="text-xl text-gray-700 text-center">Ask to customize</h5>
+                                    <h5 className="text-xl dark:text-slate-50 text-gray-800 text-center">Ask to customize</h5>
                                     <div className="mt-2 flex justify-center gap-4">
-                                        <h3 className="text-3xl font-bold text-gray-700">28</h3>
+                                        <h3 className="text-3xl font-bold dark:text-slate-50 text-gray-800">28</h3>
                                         <div className="flex items-end gap-1 text-green-500">
                                             <svg className="w-3" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M6.00001 0L12 8H-3.05176e-05L6.00001 0Z" fill="currentColor" />
@@ -307,13 +306,13 @@ const dashboard = () => {
                                             <span>2%</span>
                                         </div>
                                     </div>
-                                    <span className="block text-center text-gray-500">Compared to last week 13</span>
+                                    <span className="block text-center dark:text-slate-50 text-gray-800 ">Compared to last week 13</span>
                                 </div>
                                 <table className="mt-6 -mb-2 w-full text-gray-600">
                                     <tbody>
                                         <tr>
-                                            <td className="py-2">Tailored ui</td>
-                                            <td className="text-gray-500">896</td>
+                                            <td className="py-2 dark:text-slate-50 text-gray-800">Tailored ui</td>
+                                            <td className="dark:text-slate-50 text-gray-800">896</td>
                                             <td>
                                                 <svg className="w-16 ml-auto" viewBox="0 0 68 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <rect opacity="0.4" width="17" height="21" rx="1" fill="#e4e4f2" />
@@ -331,8 +330,8 @@ const dashboard = () => {
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td className="py-2">Customize</td>
-                                            <td className="text-gray-500">1200</td>
+                                            <td className="py-2 dark:text-slate-50 text-gray-800">Customize</td>
+                                            <td className="dark:text-slate-50 text-gray-800">1200</td>
                                             <td>
                                                 <svg className="w-16 ml-auto" viewBox="0 0 68 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <rect opacity="0.4" width="17" height="21" rx="1" fill="#e4e4f2" />
@@ -350,8 +349,8 @@ const dashboard = () => {
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td className="py-2">Other</td>
-                                            <td className="text-gray-500">12</td>
+                                            <td className="py-2 dark:text-slate-50 text-gray-800">Other</td>
+                                            <td className="dark:text-slate-50 text-gray-800">12</td>
                                             <td>
                                                 <svg className="w-16 ml-auto" viewBox="0 0 68 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <rect opacity="0.4" width="17" height="21" rx="1" fill="#e4e4f2" />

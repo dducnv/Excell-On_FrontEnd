@@ -1,13 +1,13 @@
 import React from 'react'
 import Layout from '../../components/admin_layout/Layout';
 
-export const order = () => {
-  return (
-    <Layout>
+export const customer = () => {
+    return (
+        <Layout>
             <div className="w-full px-4 mx-auto">
                 <div className="relative overflow-x-auto  sm:rounded-lg">
                     <div>
-                        <span className="text-gray-600 text-lg font-semibold">Order</span>
+                        <span className="text-gray-600 text-lg font-semibold">Customer</span>
                     </div>
                     <div className="p-4">
                         <div className="flex justify-between items-center">
@@ -147,6 +147,7 @@ export const order = () => {
                 </div>
             </div>
         </Layout>
-  )
+    )
 }
-export default order;
+
+export default customer;
