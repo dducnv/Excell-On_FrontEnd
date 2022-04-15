@@ -15,8 +15,8 @@ const Order = () => {
                             <p className="text-lg dark:text-gray-400     md:text-xl font-semibold leading-6 xl:leading-5 Text-black">Customer’s Cart</p>
                             <div className="mt-4 md:mt-6 flex  flex-col md:flex-row justify-start items-start md:items-center md:space-x-6 xl:space-x-8 w-full ">
                                 <div className="pb-4 md:pb-8 w-full md:w-40">
-                                    <img className="w-full hidden md:block" src="https://i.ibb.co/84qQR4p/Rectangle-10.png" alt="dress" />
-                                    <img className="w-full md:hidden" src="https://i.ibb.co/L039qbN/Rectangle-10.png" alt="dress" />
+                                    <img className="w-full hidden md:block" src="https://image.shutterstock.com/z/stock-vector-vector-linear-illustration-dark-background-service-trend-578745856.jpg" alt="dress" />
+                                    <img className="w-full md:hidden" src="https://image.shutterstock.com/z/stock-vector-vector-linear-illustration-dark-background-service-trend-578745856.jpg" alt="dress" />
                                 </div>
                                 <div className="border-b border-gray-200 md:flex-row flex-col flex justify-between items-start w-full  pb-8 space-y-4 md:space-y-0">
                                     <div className="w-full Text-black dark:text-gray-400 flex flex-col justify-start items-start space-y-8">
@@ -37,15 +37,15 @@ const Order = () => {
                                         <p className="text-base xl:text-lg leading-6">
                                             $36.00 <span className="text-red-500 dark:text-red-300 line-through"> $45.00</span>
                                         </p>
-                                        <p className="text-base xl:text-lg leading-6 Text-black">01</p>
+                                        <p className="text-base xl:text-lg leading-6 Text-black">03</p>
                                         <p className="text-base xl:text-lg font-semibold leading-6 Text-black">$36.00</p>
                                     </div>
                                 </div>
                             </div>
                             <div className="mt-6 md:mt-0 flex justify-start flex-col md:flex-row  items-start md:items-center space-y-4  md:space-x-6 xl:space-x-8 w-full ">
                                 <div className="w-full md:w-40">
-                                    <img className="w-full hidden md:block" src="https://i.ibb.co/s6snNx0/Rectangle-17.png" alt="dress" />
-                                    <img className="w-full md:hidden" src="https://i.ibb.co/BwYWJbJ/Rectangle-10.png" alt="dress" />
+                                    <img className="w-full hidden md:block" src="https://image.shutterstock.com/z/stock-vector-linear-illustration-for-presentations-on-blue-background-service-591187340.jpg" alt="dress" />
+                                    <img className="w-full md:hidden" src="https://image.shutterstock.com/z/stock-vector-linear-illustration-for-presentations-on-blue-background-service-591187340.jpg" alt="dress" />
                                 </div>
                                 <div className="  flex justify-between items-start w-full flex-col md:flex-row space-y-4 md:space-y-0  ">
                                     <div className="w-full flex flex-col justify-start items-start space-y-8">
@@ -66,7 +66,7 @@ const Order = () => {
                                         <p className="text-base xl:text-lg leading-6">
                                             $20.00 <span className="text-red-500 dark:text-red-300 line-through"> $30.00</span>
                                         </p>
-                                        <p className="text-base xl:text-lg leading-6 Text-black">01</p>
+                                        <p className="text-base xl:text-lg leading-6 Text-black">07</p>
                                         <p className="text-base xl:text-lg font-semibold leading-6 Text-black">$20.00</p>
                                     </div>
                                 </div>
