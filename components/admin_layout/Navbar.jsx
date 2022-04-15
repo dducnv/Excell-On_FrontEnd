@@ -2,8 +2,6 @@ import React from 'react'
 import { useTheme } from 'next-themes'
 import { MoonIcon, SunIcon, SearchIcon } from '@heroicons/react/outline'
 
-
-
 export const Navbar = () => {
     const { theme, setTheme } = useTheme();
     const handleClick = () => {

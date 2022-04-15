@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/user_layout/Layout'
 
-const Order = () => {
+const order = () => {
     return (
         <Layout>
             <div className="pt-24 pb-12 md:px-6 Text-black bg-gray-200 dark:text-gray-400 dark:bg-gray-700 2xl:px-20 2xl:container 2xl:mx-auto">
@@ -162,4 +162,4 @@ const Order = () => {
     )
 }
 
-export default Order
+export default order
