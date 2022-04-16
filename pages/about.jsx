@@ -5,7 +5,7 @@ import Layout from '../components/user_layout/Layout'
 const about = () => {
   return (
     <Layout>
-      <div className='bg-gray-200 dark:bg-gray-700'>
+      <div className='bg-gray-200 dark:bg-gray-700 md:px-12 '>
         <div role="contentinfo" className="flex items-center flex-col px-4">
           <h1 tabIndex={0} className="focus:outline-none text-4xl lg:text-4xl font-extrabold text-center leading-10 dark:text-gray-400 text-gray-800 lg:w-5/12 md:w-9/12 mt-10 pt-14 pb-10">Create Beautiful Landing Pages &amp; Web Apps in a Jiffy</h1>
         </div>
@@ -172,8 +172,8 @@ const about = () => {
         </div>
       </div>
 
-      <div className='bg-gray-200 dark:bg-gray-700'>
-        <div className="mx-auto container flex justify-center items-center py-12 px-4 sm:px-6 2xl:px-0">
+      <div className='bg-gray-200 md:px-12  dark:bg-gray-700'>
+        <div className="mx-auto container  flex justify-center items-center py-12 px-4 sm:px-6 2xl:px-0">
           <div className="flex flex-col lg:flex-row justify-center items-center space-y-6 lg:space-y-0">
             <div className="w-80 sm:w-auto flex flex-col justify-start items-start">
 
@@ -195,7 +195,7 @@ const about = () => {
         </div>
         <div className='bg-gray-200 dark:bg-gray-700'>
           <div className="py-16 white">
-            <div className="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
+            <div className="container m-auto px-6 text-gray-600 xl:px-6">
               <h2 className="mb-12 text-center text-2xl dark:text-gray-400 text-gray-800 font-bold md:text-4xl">Feedback our Customer
               </h2>
               <div className="grid gap-8 md:grid-rows-2 lg:grid-cols-2">

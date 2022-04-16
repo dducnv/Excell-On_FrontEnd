@@ -4,7 +4,7 @@ import Layout from '../components/user_layout/Layout'
 const services = () => {
     return (
         <Layout>
-            <div className="py-16 bg-white dark:bg-gray-800">
+            <div className="py-16 md:px-12 bg-white dark:bg-gray-800">
                 <div className="container m-auto px-6 text-gray-500 md:px-12 xl:px-0">
                     <div className="lg:text-center mb-4 mt-7"><p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight dark:text-gray-200 text-gray-900 sm:text-4xl">We Provide Best Services
                     </p><p className="mt-4 max-w-2xl text-xl dark:text-gray-200 text-gray-800 lg:mx-auto">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
