@@ -1,6 +1,8 @@
-import HeadPage from '../components/user_layout/HeadPage'
-import Layout from '../components/user_layout/Layout'
-import { AnnotationIcon, GlobeAltIcon, LightningBoltIcon, ScaleIcon } from '@heroicons/react/outline'
+import React,{useEffect} from 'react';
+import HeadPage from '../components/user_layout/HeadPage';
+import Layout from '../components/user_layout/Layout';
+import { AnnotationIcon, GlobeAltIcon, LightningBoltIcon, ScaleIcon } from '@heroicons/react/outline';
+
 
 const features = [
   {
@@ -53,6 +55,9 @@ const features = [
   },
 ]
 export default function Home() {
+
+
+
   return (
     <>
       <Layout>
