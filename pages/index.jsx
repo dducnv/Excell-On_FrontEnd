@@ -55,9 +55,6 @@ const features = [
   },
 ]
 export default function Home() {
-
-
-
   return (
     <>
       <Layout>
