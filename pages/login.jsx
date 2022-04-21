@@ -11,8 +11,6 @@ const login = () => {
     const handleLogin = async (e) =>{
         e.preventDefault();
         const userToken = await authApi.LoginApi(username,password);
-        console.log(username )
-        console.log(password)
         console.log(userToken)
     }
 
