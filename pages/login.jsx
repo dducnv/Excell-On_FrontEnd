@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import authApi from "../api/authApi";
 
 
 const login = () => {
@@ -9,9 +10,10 @@ const login = () => {
 
     const handleLogin = async (e) =>{
         e.preventDefault();
-        const userToken = await
-        console.log(username)
+        const userToken = await authApi.LoginApi(username,password);
+        console.log(username )
         console.log(password)
+        console.log(userToken)
     }
 
     return (

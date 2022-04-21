@@ -2,11 +2,7 @@ import axios from 'axios';
 import queryString from 'query-string';
 
 const axiosClient = axios.create({
-    baseURL: "https://excell-on/api/",
-    // baseURL: "http://127.0.0.1:8000/api",
-    headers: {
-        'content-type': 'application/json',
-    },
+    baseURL: "https://excell-on-backend.azurewebsites.net",
     paramsSerializer: params => queryString.stringify(params),
 });
 axiosClient.interceptors.request.use(async (config) => {
