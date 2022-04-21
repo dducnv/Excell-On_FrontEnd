@@ -55,7 +55,7 @@ const contact = () => {
                                  placeholder="Your Message"
                                  className="w-full rounded py-3 px-[14px] text-gray-800 dark:text-gray-300 font-semibold dark:bg-gray-700 border border-[f0f0f0] resize-none outline-none focus-visible:shadow-none focus:border-primary "
                         
-                              ></textarea>
+                              />
                            </div>
                            <div>
                               <button type="submit"  className="w-full text-white bg-indigo-600 dark:bg-indigo-800 rounded border border-primary p-3 transition hover:bg-opacity-90">
@@ -63,7 +63,6 @@ const contact = () => {
                               </button>
                            </div>
                         </form>
-
                      </div>
                   </div>
                </div>
