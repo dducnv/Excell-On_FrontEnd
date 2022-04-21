@@ -33,3 +33,7 @@ yarn-error.log*
 
 # vercel
 .vercel
+/.idea/Excell-On_FrontEnd.iml
+/.idea/modules.xml
+/.idea/inspectionProfiles/Project_Default.xml
+/.idea/vcs.xml
