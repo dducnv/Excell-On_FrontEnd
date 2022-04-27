@@ -19,6 +19,8 @@
     "query-string": "^7.1.1",
     "react": "18.0.0",
     "react-dom": "18.0.0",
+    "react-hot-toast": "^2.2.0",
+    "react-use-cart": "^1.13.0",
     "styled-components": "^5.3.5",
     "swiper": "^8.1.0"
   },

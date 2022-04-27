@@ -94,7 +94,7 @@ const about = () => {
                       <div className="h-32 w-32">
                         <img src="https://www.shareicon.net/data/512x512/2016/08/05/806962_user_512x512.png" alt className="rounded-full object-cover h-full w-full shadow-md" />
                       </div>
-                    </div>
+                    </div>  
                     <div className="px-6 mt-16">
                       <div className="font-bold text-3xl text-center pb-1">Nguyễn Văn Đức</div>
                       <p className="text-gray-800 text-sm text-center">Manager of Company
