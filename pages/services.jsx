@@ -24,8 +24,8 @@ const Services = () => {
                     </p><p className="mt-4 max-w-2xl text-xl dark:text-gray-200 text-gray-800 lg:mx-auto">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
                         doloremque, eaque ipsa quae ab illo inventore.</p></div>
                     <div className="mx-auto grid gap-6 md:w-3/4 lg:w-full lg:grid-cols-3">
-                        {service.map((services) => (
-                            <Service name={services.Name} image={services.Image} desc={services.Description}/>
+                        {service.map((services,index) => (
+                            <Service key={index} name={services.Name} image={services.Image} desc={services.Description}/>
                         ))}                                                     
                     </div>
                 </div>
