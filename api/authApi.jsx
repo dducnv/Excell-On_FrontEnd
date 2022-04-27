@@ -8,6 +8,21 @@ const authApi ={
                 "Access-Control-Allow-Origin": "*"
             },
         });
+    },
+    Register : (FullName,Email,UserName,Password,ConfirmPassword) =>{
+        let registerData = JSON.stringify({
+            FullName:FullName,
+            Email:Email,
+            UserName:UserName,
+            Password:Password,
+            ConfirmPassword:ConfirmPassword
+        })
+        return axiosClient.post("/api/account/register",registerData, {
+            headers: {
+                "Content-Type": 'application/json',
+                "Access-Control-Allow-Origin": "*"
+            },
+        });
     }
 }
 

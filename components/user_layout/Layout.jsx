@@ -1,12 +1,12 @@
 import React from 'react'
 import Footer from './Footer'
 import Navbar from './Navbar'
-
-Navbar
+import toast, { Toaster } from 'react-hot-toast';
 
 const Layout = (props) => {
   return (
     <>
+
       <Navbar/>
       {props.children}
       <Footer/>

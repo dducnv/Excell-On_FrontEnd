@@ -1,6 +1,30 @@
-import React from 'react'
+import React, {useState} from 'react';
+import authApi from "../api/authApi";
+import toast, { Toaster } from 'react-hot-toast';
+
+
+
 
 const register = () => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [fullname,setFullName] = useState( '');
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [email,setEmail] = useState( '');
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [username,setUserName] = useState( '');
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [password,setPassword] = useState( '');
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [confirmpassword,setConfirmPassword] = useState( '');
+
+    const handleRegister = async (e) =>{
+        e.preventDefault();
+        const userToken = await authApi.Register(fullname,email,username,password,confirmpassword);
+        console.log(userToken)
+    }
+
+
+
     return (
         <>
             <div className="h-screen bg-gradient-to-br from-blue-600 to-indigo-600 flex justify-center items-center w-full">
@@ -10,22 +34,26 @@ const register = () => {
                             <h1 className="text-center text-2xl font-semibold text-gray-900">Register</h1>
                             <div>
                                 <label htmlFor="email" className="block mb-1 text-gray-600 font-semibold">Full Name</label>
-                                <input type="text" className="bg-indigo-50 px-4 py-2 outline-none rounded-md w-full" />
+                                <input type="text" onChange={value => setFullName(value.target.value) } className="bg-indigo-50 px-4 py-2 outline-none rounded-md w-full" />
                             </div>
                             <div>
                                 <label htmlFor="email" className="block mb-1 text-gray-600 font-semibold">Email</label>
-                                <input type="text" className="bg-indigo-50 px-4 py-2 outline-none rounded-md w-full" />
+                                <input type="text" onChange={value => setEmail(value.target.value) } className="bg-indigo-50 px-4 py-2 outline-none rounded-md w-full" />
+                            </div>
+                            <div>
+                                <label htmlFor="email" className="block mb-1 text-gray-600 font-semibold">UserName</label>
+                                <input type="text" onChange={value => setUserName(value.target.value) } className="bg-indigo-50 px-4 py-2 outline-none rounded-md w-full" />
                             </div>
                             <div>
                                 <label htmlFor="email" className="block mb-1 text-gray-600 font-semibold">Password</label>
-                                <input type="text" className="bg-indigo-50 px-4 py-2 outline-none rounded-md w-full" />
+                                <input type="password" onChange={value => setPassword(value.target.value) } className="bg-indigo-50 px-4 py-2 outline-none rounded-md w-full" />
                             </div>
                             <div>
                                 <label htmlFor="email" className="block mb-1 text-gray-600 font-semibold">Confirm Password</label>
-                                <input type="text" className="bg-indigo-50 px-4 py-2 outline-none rounded-md w-full" />
+                                <input type="password" onChange={value => setConfirmPassword(value.target.value) } className="bg-indigo-50 px-4 py-2 outline-none rounded-md w-full" />
                             </div>
                         </div>
-                        <button className="mt-4 w-full bg-gradient-to-tr from-blue-600 to-indigo-600 text-indigo-100 py-2 rounded-md text-lg tracking-wide">Register</button>
+                        <button onClick={handleRegister} className="mt-4 w-full bg-gradient-to-tr from-blue-600 to-indigo-600 text-indigo-100 py-2 rounded-md text-lg tracking-wide">Register</button>
                     </div>
                 </form>
             </div>

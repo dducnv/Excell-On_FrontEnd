@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import authApi from "../api/authApi";
+import toast, { Toaster } from 'react-hot-toast';
 
 
 const login = () => {
@@ -10,12 +11,24 @@ const login = () => {
 
     const handleLogin = async (e) =>{
         e.preventDefault();
-        const userToken = await authApi.LoginApi(username,password);
-        console.log(userToken)
+        if(username == null || username === ''){
+            toast.error("Vui Lòng Nhập User Name.")
+        }else if(password == null ||password === ''){
+            toast.error("Vui Lòng Nhập Password.")
+        }else {
+            const userToken = await authApi.LoginApi(username,password);
+            console.log(userToken)
+        }
+
+
     }
 
     return (
-        <> 
+        <>
+            <Toaster
+                position="top-center"
+                reverseOrder={false}
+            />
             <div className="h-screen bg-gradient-to-br from-blue-600 to-indigo-200 flex justify-center items-center w-full">
                 <form>
                     <div className="bg-white px-10 py-8 rounded-xl w-screen shadow-md max-w-sm">
