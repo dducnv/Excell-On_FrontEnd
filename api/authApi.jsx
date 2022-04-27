@@ -1,6 +1,6 @@
 import axiosClient from "./axiosClient";
 const authApi ={
-    : (username, password) => {
+    LoginApi: (username, password) => {
         let loginData =  'grant_type=password&username='+ username + '&password=' + password;
         return axiosClient.post("/token",loginData, {
             headers: {

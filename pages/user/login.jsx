@@ -1,6 +1,6 @@
 
 import React, {useState} from 'react';
-import authApi from "../api/authApi";
+import authApi from "../../api/authApi";
 import toast, { Toaster } from 'react-hot-toast';
 
 
