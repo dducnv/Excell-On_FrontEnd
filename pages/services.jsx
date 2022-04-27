@@ -4,7 +4,7 @@ import React , {useEffect, useState} from 'react'
 import Service from '../components/user_layout/components/Service'
 
 import Layout from '../components/user_layout/Layout'
-const services = () => {
+const Services = () => {
     const [service, setService] = useState([])
     useEffect(()=>{
         axios.get('https://excell-on-backend.azurewebsites.net/api/services')
@@ -34,4 +34,4 @@ const services = () => {
     )
 }
 
-export default services
+export default Services

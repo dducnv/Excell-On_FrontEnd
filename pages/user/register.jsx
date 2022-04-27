@@ -5,7 +5,7 @@ import toast, { Toaster } from 'react-hot-toast';
 
 
 
-const register = () => {
+const Register = () => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [fullname,setFullName] = useState( '');
     // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -61,4 +61,4 @@ const register = () => {
     )
 }
 
-export default register
+export default Register

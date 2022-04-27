@@ -4,7 +4,7 @@ import authApi from "../api/authApi";
 import toast, { Toaster } from 'react-hot-toast';
 
 
-const login = () => {
+const Login = () => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [username,setUsername] = useState( '');
     // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -53,4 +53,4 @@ const login = () => {
     )
 }
 
-export default login 
+export default Login 

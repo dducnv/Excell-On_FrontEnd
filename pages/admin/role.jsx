@@ -2,7 +2,7 @@ import React, {useEffect,useState} from 'react'
 import axios from 'axios';
 import Layout from '../../components/admin_layout/Layout';
 
-export const role = () => {
+export const Role = () => {
 
 
     return (
@@ -168,4 +168,4 @@ export const role = () => {
         </Layout>
     )
 }
-export default role;
+export default Role;

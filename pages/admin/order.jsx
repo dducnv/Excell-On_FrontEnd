@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../../components/admin_layout/Layout';
 
-export const order = () => {
+export const Order = () => {
     return (
         <Layout>
             <div className="w-full px-4 mx-auto">
@@ -165,4 +165,4 @@ export const order = () => {
         </Layout>
     )
 }
-export default order;
+export default Order;

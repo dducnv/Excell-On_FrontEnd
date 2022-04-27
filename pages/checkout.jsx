@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Layout from '../components/user_layout/Layout'
 
 
-const checkout = () => {
+const Checkout = () => {
     const countries = ["China", "Russia", "UK"];
     const [menu, setMenu] = useState(false);
     const [country, setCountry] = useState("United States");
@@ -202,4 +202,4 @@ const checkout = () => {
     )
 }
 
-export default checkout;
+export default Checkout;

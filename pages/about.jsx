@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '../components/user_layout/Layout'
 
 
-const about = () => {
+const About = () => {
   return (
     <Layout>
       <div className='bg-gray-200 dark:bg-gray-700 md:px-12 '>
@@ -247,4 +247,4 @@ const about = () => {
 
 }
 
-export default about;
+export default About;

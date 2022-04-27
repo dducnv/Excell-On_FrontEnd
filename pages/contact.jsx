@@ -1,7 +1,7 @@
 import React  from 'react'
 import Layout from "../components/user_layout/Layout"
 
-const contact = () => {
+const Contact = () => {
     return (
         <Layout>
             <section
@@ -75,4 +75,4 @@ const contact = () => {
     )
 }
 
-export default contact
+export default Contact
