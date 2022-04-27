@@ -11,7 +11,7 @@ const login = () => {
     }
     return (
         <> 
-            <div className="h-screen bg-gradient-to-br from-blue-600 to-indigo-600 flex justify-center items-center w-full">
+            <div className="h-screen bg-gradient-to-br from-blue-600 to-indigo-200 flex justify-center items-center w-full">
                 <form>
                     <div className="bg-white px-10 py-8 rounded-xl w-screen shadow-md max-w-sm">
                         <div className="space-y-4">
