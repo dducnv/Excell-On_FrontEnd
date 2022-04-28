@@ -5,6 +5,7 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import Link from 'next/link'
 
 const HeadPage = () => {
+    
     return (
         <>
             <div className="relative bg-white dark:bg-gray-800 overflow-hidden">

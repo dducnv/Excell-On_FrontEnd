@@ -13,6 +13,9 @@ const Cart = () => {
 
     } = useCart();
     if (isEmpty) return <h1 className="text-center">Your Cart is isEmpty</h1>
+    if (typeof window === 'undefined') {
+        return <></>
+    }
     return (
         <section className="py-4 container">
             <div className="row justify-content-center">
