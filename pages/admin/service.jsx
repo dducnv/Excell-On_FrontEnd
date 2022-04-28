@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import axios from 'axios';
 import serviceApi from '../../api/serviceApi';
 import Layout from '../../components/admin_layout/Layout';
+import _ from 'lodash';
 
 const Service = () => {
     const [services, setService] = useState([])
@@ -109,7 +109,7 @@ const Service = () => {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {services.map((service, index) => (
+                                {_.map(services,(service, index)=> (
                                         <tr
                                             key={index}
                                             className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
