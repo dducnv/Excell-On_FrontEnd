@@ -4,10 +4,12 @@ import Layout from '../components/user_layout/Layout';
 import Services from '../components/user_layout/components/Services';
 import Stat from '../components/user_layout/components/Stat';
 import Feedback from '../components/user_layout/components/Feedback';
+import CartPopup from '../components/user_layout/CartPopup';
 
 
 
 export default function Home() {
+  
   return (
     <>
       <Layout>

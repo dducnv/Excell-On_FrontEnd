@@ -4,6 +4,7 @@ import Navbar from './Navbar'
 import toast, { Toaster } from 'react-hot-toast';
 
 const Layout = (props) => {
+  
   return (
     <>
 
