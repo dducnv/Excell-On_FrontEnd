@@ -13,8 +13,8 @@ const About = () => {
           <div className="flex flex-col lg:flex-row justify-center items-center space-y-6 lg:space-y-0">
             <div className="w-80 sm:w-auto flex flex-col justify-start items-start">
               <div>
-                <p className="text-3xl xl:text-4xl font-semibold leading-9 dark:text-gray-400 text-gray-800">Few Words About Us!
-                </p>
+                <div className="text-3xl xl:text-4xl font-semibold leading-9 dark:text-gray-400 text-gray-800">Few Words About Us!
+                </div>
               </div>
               <div className="mt-4 lg:w-4/5 xl:w-3/5">
                 <p className="text-base leading-6 dark:text-gray-400 text-gray-800">Excell-on has segregated themselves into various branches based
@@ -23,7 +23,7 @@ const About = () => {
               </div>
               <div className="mt-16 w-full">
                 <button className="px-4 bg-gray-900 flex justify-between items-center w-full lg:w-72 h-14 text-gray-100 hover:text-gray-300 hover:bg-gray-600">
-                  <p className="text-xl font-medium leading-5">View Out Services</p>
+                  <div className="text-xl font-medium leading-5">View Out Services</div>
                   <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6.66663 16H25.3333" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                     <path d="M20 21.3333L25.3333 16" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />

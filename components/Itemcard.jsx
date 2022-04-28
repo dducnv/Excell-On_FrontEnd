@@ -3,6 +3,9 @@ import { useCart } from "react-use-cart";
 
 const Itemcard = (props) => {
   const { addItem } = useCart(typeof window === "undefined");
+  if (typeof window === 'undefined') {
+    return <></>
+}
     return (
         <div className="col-11 col-md-6 col-lg-3 mx-0 mb-4">
             <div className="card p-0 overflow-hidden h-100 shadow">
