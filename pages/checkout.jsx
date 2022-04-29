@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Layout from '../components/user_layout/Layout'
-import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
+import {PayPalScriptProvider,PayPalButtons } from "@paypal/react-paypal-js"
 
 const initialOptions = {
     "client-id": "AfGLbRweGTWUtjBVKy2qicCK94pTS5wyYVPLhHUVFp5n9siQ9MToXnxGxR2BlmCIc98g5x4E6BbWAVDJ",

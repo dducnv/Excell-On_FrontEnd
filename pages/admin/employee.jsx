@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import toast, { Toaster } from 'react-hot-toast';
 import Layout from '../../components/admin_layout/Layout';
 import userApi from '../../api/userApi';
+import _ from 'lodash';
 
 const Employee = () => {
     const [Avatar, setAvatar] = useState('')
@@ -163,7 +164,7 @@ const Employee = () => {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {Employees.map((employee,index) => (
+                                {_.map(Employees,(employee, index)=> (
                                         <tr
                                         key={index}
                                             className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">

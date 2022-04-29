@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import userApi from '../../api/userApi';
 import Layout from '../../components/admin_layout/Layout';
+import _ from 'lodash';
 
 export const Users = () => {
     const [Users, setUser] = useState([])
@@ -82,7 +83,7 @@ export const Users = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            {Users.map((user, index) => (
+                        {_.map(Users,(user, index)=> (
                                 <tr key={index} className="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
                                     <td className="w-4 p-4">
                                         <div className="flex items-center">
