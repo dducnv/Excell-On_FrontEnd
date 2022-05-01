@@ -11,7 +11,6 @@ const Checkout = () => {
     const countries = ["China", "Russia", "UK"];
     const [menu, setMenu] = useState(false);
     const [country, setCountry] = useState("United States");
-
     const changeText = (e) => {
         setMenu(false);
         setCountry(e.target.textContent);
@@ -31,9 +30,7 @@ const Checkout = () => {
                                     </svg>
                                     <p className="text-sm leading-none">Back</p>
                                 </button>
-
                             </div>
-
                             <div className="flex flex-col xl:flex-row justify-center items-start xl:justify-betweenxl:space-y-0 xl:space-x-6 w-full">
                                 <div className=" flex flex-col sm:flex-row xl:flex-col justify-center items-center bg-gray-100 sm:py-0  px-4 w-full">
                                     <div className="h-750 px-4 overflow-x-auto">
@@ -126,15 +123,10 @@ const Checkout = () => {
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
-
                                 <div className="p-8 bg-gray-100 flex flex-col lg:w-full xl:w-3/5">
-                                    
-
                                     <PayPalScriptProvider options={initialOptions}>
                                         <PayPalButtons
-
                                             createOrder={(data,actions) => {
                                                 return actions.order.create({
                                                     purchase_units: [
