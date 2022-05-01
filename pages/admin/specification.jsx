@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import toast, { Toaster } from 'react-hot-toast';
 import specificationsApi from '../../api/specificationsApi'
 import Layout from '../../components/admin_layout/Layout';
+import _ from 'lodash';
 
 const Specification = () => {
     const [Specifications, setSpecifications] = useState([])
@@ -101,7 +102,7 @@ const Specification = () => {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {Specifications.map((specification,index) => (
+                                {_.map(Specifications,(specification, index)=> (
                                         <tr
                                         key={index}
                                             className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">

@@ -1,7 +1,10 @@
-import React from 'react'
+import React,{useEffect,useState} from 'react'
+import axios from 'axios';
 import Layout from '../../components/admin_layout/Layout';
 
 export const Order = () => {
+    
+
     return (
         <Layout>
             <div className="w-full px-4 mx-auto">
