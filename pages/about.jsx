@@ -5,7 +5,7 @@ import Layout from '../components/user_layout/Layout'
 const About = () => {
   return (
     <Layout>
-      <div className='bg-gray-200 dark:bg-gray-700 md:px-12 '>
+      <div className='bg-white dark:bg-gray-700 md:px-12 '>
         <div role="contentinfo" className="flex items-center flex-col px-4">
           <h1 tabIndex={0} className="focus:outline-none text-4xl lg:text-4xl font-extrabold text-center leading-10 dark:text-gray-400 text-gray-800 lg:w-5/12 md:w-9/12 mt-10 pt-14 pb-10">Create Beautiful Landing Pages &amp; Web Apps in a Jiffy</h1>
         </div>
@@ -45,12 +45,12 @@ const About = () => {
             <p className="xl:text-4xl text-3xl text-center dark:text-gray-400 text-gray-800 font-extrabold pb-6 sm:w-4/6 w-5/6 mx-auto">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
               doloremque, eaque ipsa quae ab illo inventore.</p>
           </div>
-          <div className="w-full bg-gray-200 dark:bg-gray-700 text-gray-800 px-10 pt-10">
+          <div className="w-full bg-white dark:bg-gray-700 text-gray-800 px-10 pt-10">
             <div className="container mx-auto">
               <div className="lg:flex md:flex sm:flex items-center xl:justify-between flex-wrap md:justify-around sm:justify-around lg:justify-around">
 
                 <div className="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-16 mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5">
-                  <div className="rounded overflow-hidden shadow-md bg-gray-200 dark:bg-gray-500">
+                  <div className="rounded overflow-hidden shadow-md bg-white dark:bg-gray-500">
                     <div className="absolute -mt-20 w-full flex justify-center">
                       <div className="h-32 w-32">
                         <img src="https://alkhan.com.pk/wp-content/uploads/2020/11/avatar_woman.png" alt className="rounded-full object-cover h-full w-full shadow-md" />
@@ -89,7 +89,7 @@ const About = () => {
                   </div>
                 </div>
                 <div className="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-16 mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5">
-                  <div className="rounded overflow-hidden shadow-md bg-gray-200 dark:bg-gray-500">
+                  <div className="rounded overflow-hidden shadow-md bg-white dark:bg-gray-500">
                     <div className="absolute -mt-20 w-full flex justify-center">
                       <div className="h-32 w-32">
                         <img src="https://www.shareicon.net/data/512x512/2016/08/05/806962_user_512x512.png" alt className="rounded-full object-cover h-full w-full shadow-md" />
@@ -128,7 +128,7 @@ const About = () => {
                   </div>
                 </div>
                 <div className="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-16 mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5">
-                  <div className="rounded overflow-hidden shadow-md bg-gray-200 dark:bg-gray-500">
+                  <div className="rounded overflow-hidden shadow-md bg-white dark:bg-gray-500">
                     <div className="absolute -mt-20 w-full flex justify-center">
                       <div className="h-32 w-32">
                         <img src="https://png.pngtree.com/png-vector/20190704/ourlarge/pngtree-businessman-user-avatar-free-vector-png-image_1538405.jpg" alt className="rounded-full object-cover h-full w-full shadow-md" />
@@ -172,7 +172,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className='bg-gray-200 md:px-12  dark:bg-gray-700'>
+      <div className='bg-white md:px-12  dark:bg-gray-700'>
         <div className="mx-auto container  flex justify-center items-center py-12 px-4 sm:px-6 2xl:px-0">
           <div className="flex flex-col lg:flex-row justify-center items-center space-y-6 lg:space-y-0">
             <div className="w-80 sm:w-auto flex flex-col justify-start items-start">
@@ -193,14 +193,14 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className='bg-gray-200 dark:bg-gray-700'>
+        <div className='bg-white shadow-sm dark:bg-gray-700'>
           <div className="py-16 white">
             <div className="container m-auto px-6 text-gray-600 xl:px-6">
               <h2 className="mb-12 text-center text-2xl dark:text-gray-400 text-gray-800 font-bold md:text-4xl">Feedback our Customer
               </h2>
               <div className="grid gap-8 md:grid-rows-2 lg:grid-cols-2">
-                <div className="row-span-2 p-6 borde rounded-xl bg-gray-200 dark:bg-gray-700 sm:flex sm:space-x-8 sm:p-8">
-                  <div className="p-6 border rounded-xl bg-gray-200 dark:bg-gray-700 sm:flex sm:space-x-8 sm:p-8">
+                <div className="row-span-2 p-6 border rounded-xl bg-gray-50 shadow-sm dark:bg-gray-700 sm:flex sm:space-x-8 sm:p-8">
+                  <div className="p-6  bg-gray-50 dark:bg-gray-700 sm:flex sm:space-x-8 sm:p-8">
                     <img className="w-20 h-20 mx-auto rounded-full" src="https://www.shareicon.net/data/512x512/2017/01/06/868320_people_512x512.png" alt="user avatar" height="220" width="220" loading="lazy" />
                     <div className="space-y-4 mt-4 text-center sm:mt-0 sm:text-left">
                       <p className="dark:text-gray-400 text-gray-800"> <span className="font-serif">&quot</span> We are very pleased with the service
@@ -213,7 +213,7 @@ const About = () => {
                     </div>
                   </div>
                 </div>
-                <div className="p-6 border rounded-xl bg-gray-200 dark:bg-gray-700 sm:flex sm:space-x-8 sm:p-8">
+                <div className="p-6 border rounded-xl bg-gray-50 shadow-sm dark:bg-gray-700 sm:flex sm:space-x-8 sm:p-8">
                   <img className="w-20 h-20 mx-auto rounded-full" src="https://www.kindpng.com/picc/m/78-786207_user-avatar-png-user-avatar-icon-png-transparent.png" alt="user avatar" height="220" width="220" loading="lazy" />
                   <div className="space-y-4 mt-4 text-center sm:mt-0 sm:text-left">
                     <p className="dark:text-gray-400 text-gray-800"> <span className="font-serif">&quot</span> Creat. I have hired many services
@@ -225,7 +225,7 @@ const About = () => {
                     </div>
                   </div>
                 </div>
-                <div className="p-6 border rounded-xl bg-gray-200 dark:bg-gray-700 sm:flex sm:space-x-8 sm:p-8">
+                <div className="p-6 border rounded-xl bg-gray-50 shadow-sm dark:bg-gray-700 sm:flex sm:space-x-8 sm:p-8">
                   <img className="w-20 h-20 mx-auto rounded-full" src="https://www.kindpng.com/picc/m/163-1636340_user-avatar-icon-avatar-transparent-user-icon-png.png" alt="user avatar" height="220" width="220" loading="lazy" />
                   <div className="space-y-4 mt-4 text-center sm:mt-0 sm:text-left">
                     <p className="dark:text-gray-400 text-gray-800"> <span className="font-serif">&quot</span>If you are a busy porson, come here.

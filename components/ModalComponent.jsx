@@ -2,7 +2,6 @@ import React from 'react';
 import {
     Box,
     Modal,
-    Button,
     Typography
 } from '@mui/material';
 
@@ -23,7 +22,6 @@ const ModalComponent = (props) => {
         <div>
             <Modal
                 open={props.isOpen}
-                onClose={props.isOpen}
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
             >
