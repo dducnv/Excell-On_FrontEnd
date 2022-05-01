@@ -35,12 +35,12 @@ export const Navbar = () => {
   }
   return (
     <>
-      <nav className="bg-white border-gray-400 px-2 md:px-6 py-2.5 fixed z-40 w-full dark:bg-gray-800">
+      <nav className="bg-white border-b border-gray-200 shadow px-2 md:px-6 py-2.5 fixed z-40 w-full dark:bg-gray-800">
         <div className="container flex flex-wrap justify-between items-center mx-auto">
           <div className='flex '>
             <Link href={"/"}>
               <a className="flex items-center mr-10">
-                <h1 className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">ExCell-On</h1>
+                <h1 className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Excell-On.</h1>
               </a>
             </Link>
 
