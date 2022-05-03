@@ -20,7 +20,7 @@ const Service = () => {
         <Layout>
             <div className="flex items-center justify-between w-full">
                 <div className="flex flex-col lg:flex-row w-full rounded bg-white mt-4">
-                    <div className="lg:w-2/5 bg-gray-500 border border-gray-200  dark:bg-gray-800" >
+                    <div className="lg:w-2/5 border-gray-200  dark:bg-gray-800" >
                         <div className="w-full ">
                             <form action="#" method="POST">
                                 <div className="">
@@ -86,12 +86,17 @@ const Service = () => {
                                         <th scope="col" className="px-6 py-3">
                                             ID
                                         </th>
-
+                                        <th scope="col" className="px-6 py-3">
+                                            Image
+                                        </th>
                                         <th scope="col" className="px-6 py-3">
                                             NAME
                                         </th>
                                         <th scope="col" className="px-6 py-3">
                                             Price
+                                        </th>
+                                        <th scope="col" className="px-6 py-3">
+                                            Description
                                         </th>
                                         <th scope="col" className="px-6 py-3">
                                             CreatedAt
@@ -109,7 +114,7 @@ const Service = () => {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                {_.map(services,(service, index)=> (
+                                    {_.map(services, (service, index) => (
                                         <tr
                                             key={index}
                                             className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
@@ -119,23 +124,56 @@ const Service = () => {
                                                     <label htmlFor="checkbox-table-search-1" className="sr-only">checkbox</label>
                                                 </div>
                                             </td>
+
                                             <th scope="row" className="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
                                                 {service.Id}
                                             </th>
+                                            <td className="px-6 py-4 text-gray-900 dark:text-white">
+                                                {service.Avatar ?
+                                                    <img src={service.Image} alt={service.Name} />
+                                                    :
+                                                    <h1> Null</h1>
+                                                }
+                                            </td>
+                                            <td className="px-6 py-4 text-gray-900 dark:text-white">
+                                                {service.Name ?
+                                                    service.Name
+                                                    :
+                                                    <h1> Null</h1>
+                                                }
 
-                                            <td className="px-6 py-4 text-gray-900 dark:text-white">
-                                                {service.Name}
                                             </td>
                                             <td className="px-6 py-4 text-gray-900 dark:text-white">
-                                                {service.Price}
+                                                {service.Price ?
+                                                    service.Price
+                                                    :
+                                                    <h1> Null</h1>
+                                                }                                            </td>
+                                            <td className="px-6 py-4 text-gray-900 dark:text-white ">
+                                                <div className=" text-align ">
+                                                    <i>
+                                                    {service.Description ?
+                                                        service.Description
+                                                        :
+                                                        <h1> Null</h1>
+                                                    }
+                                                    </i>
+                                                </div>
                                             </td>
                                             <td className="px-6 py-4 text-gray-900 dark:text-white">
-                                                {service.CreatedAt}
+                                                {service.CreatedAt ?
+                                                    service.CreatedAt
+                                                    :
+                                                    <h1> Null</h1>
+                                                }
                                             </td>
                                             <td className="px-6 py-4 text-gray-900 dark:text-white">
-                                                {service.UpdateAt}
+                                                {service.UpdateAt ?
+                                                    service.UpdateAt
+                                                    :
+                                                    <h1> Null</h1>
+                                                }
                                             </td>
-
                                             <td className="px-6 py-4 text-right">
                                                 <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                                             </td>

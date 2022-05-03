@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import toast, { Toaster } from 'react-hot-toast';
 import specificationsApi from '../../api/specificationsApi'
 import Layout from '../../components/admin_layout/Layout';
+import _ from 'lodash';
 
 const Specification = () => {
     const [Specifications, setSpecifications] = useState([])
@@ -101,9 +102,9 @@ const Specification = () => {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {Specifications.map((specification,index) => (
+                                    {_.map(Specifications, (specification, index) => (
                                         <tr
-                                        key={index}
+                                            key={index}
                                             className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                                             <td className="w-4 p-4">
                                                 <div className="flex items-center">
@@ -112,7 +113,11 @@ const Specification = () => {
                                                 </div>
                                             </td>
                                             <th scope="row" className="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
-                                                {specification.Name}
+                                                {specification.Name ?
+                                                    specification.Name
+                                                    :
+                                                    <h1> Null</h1>
+                                                }
                                             </th>
                                             <td className="px-6 py-4 text-right">
                                                 <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>

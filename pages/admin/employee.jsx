@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import toast, { Toaster } from 'react-hot-toast';
 import Layout from '../../components/admin_layout/Layout';
 import userApi from '../../api/userApi';
+import _ from 'lodash';
 
 const Employee = () => {
     const [Avatar, setAvatar] = useState('')
@@ -137,10 +138,10 @@ const Employee = () => {
                                         </th>
 
                                         <th scope="col" className="px-6 py-3">
-                                            Avatar
+                                            CitizenID
                                         </th>
                                         <th scope="col" className="px-6 py-3">
-                                            CitizenID
+                                            Avatar
                                         </th>
                                         <th scope="col" className="px-6 py-3">
                                             FullName
@@ -163,9 +164,9 @@ const Employee = () => {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {Employees.map((employee,index) => (
+                                    {_.map(Employees, (employee, index) => (
                                         <tr
-                                        key={index}
+                                            key={index}
                                             className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                                             <td className="w-4 p-4">
                                                 <div className="flex items-center">
@@ -174,28 +175,60 @@ const Employee = () => {
                                                 </div>
                                             </td>
                                             <th scope="row" className="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
-                                                {employee.CitizenID}
+                                                {employee.CitizenID ?
+                                                    employee.CitizenID
+                                                    :
+                                                    <h1> Null</h1>
+                                                }
                                             </th>
                                             <td className="px-6 py-4 text-gray-900 dark:text-white">
-                                                {employee.Avatar}
+                                                {employee.Avatar ?
+                                                    employee.Avatar
+                                                    :
+                                                    <h1> Null</h1>
+                                                }
                                             </td>
                                             <td className="px-6 py-4 text-gray-900 dark:text-white">
-                                                {employee.FullName}
+                                                {employee.FullName ?
+                                                    employee.FullName
+                                                    :
+                                                    <h1> Null</h1>
+                                                }
                                             </td>
                                             <td className="px-6 py-4 text-gray-900 dark:text-white">
-                                                {employee.Email}
+                                                {employee.Email ?
+                                                    employee.Email
+                                                    :
+                                                    <h1> Null</h1>
+                                                }
                                             </td>
                                             <td className="px-6 py-4 text-gray-900 dark:text-white">
-                                                {employee.Birthday}
+                                                {employee.Birthday ?
+                                                    employee.Birthday
+                                                    :
+                                                    <h1> Null</h1>
+                                                }
                                             </td>
                                             <td className="px-6 py-4 text-gray-900 dark:text-white">
-                                                {employee.PhoneNumber}
+                                                {employee.PhoneNumber ?
+                                                    employee.PhoneNumber
+                                                    :
+                                                    <h1> Null</h1>
+                                                }
                                             </td>
                                             <td className="px-6 py-4 text-gray-900 dark:text-white">
-                                                {employee.Orders}
+                                                {employee.Orders ?
+                                                    employee.Orders
+                                                    :
+                                                    <h1> Null</h1>
+                                                }
                                             </td>
                                             <td className="px-6 py-4 text-gray-900 dark:text-white">
-                                                {employee.Specification}
+                                                {employee.Specification ?
+                                                    employee.Specification
+                                                    :
+                                                    <h1> Null</h1>
+                                                }
                                             </td>
                                             <td className="px-6 py-4 text-right">
                                                 <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
