@@ -2,10 +2,12 @@ import React, {useState} from 'react';
 import authApi from "../../api/authApi";
 import toast, { Toaster } from 'react-hot-toast';
 
+import { useRouter } from 'next/router'
 
 
 
 const Register = () => {
+    const router = useRouter();
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [fullname,setFullName] = useState( '');
     // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -15,14 +17,23 @@ const Register = () => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [password,setPassword] = useState( '');
     // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [address,setAddress] = useState( '');
     const [confirmpassword,setConfirmPassword] = useState( '');
 
     const handleRegister = async (e) =>{
         e.preventDefault();
-        const userToken = await authApi.Register(fullname,email,username,password,confirmpassword);
-        console.log(userToken)
-    }
+        const userToken = await authApi.Register(fullname,email,username,address,password,confirmpassword);
+        if(userToken.status === 200){
+            toast.success("Register Successful!")
+            router.push('/login')
 
+        }else{
+            toast.error("Register Failed!")
+        }
+    }
+    if(localStorage.getItem("user-token") || localStorage.getItem("user-token") !== null){
+         router.push('/')
+    }
 
 
     return (
@@ -43,6 +54,10 @@ const Register = () => {
                             <div>
                                 <label htmlFor="email" className="block mb-1 text-gray-600 font-semibold">UserName</label>
                                 <input type="text" onChange={value => setUserName(value.target.value) } className="bg-indigo-50 px-4 py-2 outline-none rounded-md w-full" />
+                            </div>
+                            <div>
+                                <label htmlFor="email" className="block mb-1 text-gray-600 font-semibold">Adderss</label>
+                                <input type="text" onChange={value => setAddress(value.target.value) } className="bg-indigo-50 px-4 py-2 outline-none rounded-md w-full" />
                             </div>
                             <div>
                                 <label htmlFor="email" className="block mb-1 text-gray-600 font-semibold">Password</label>

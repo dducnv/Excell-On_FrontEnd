@@ -3,19 +3,34 @@ import toast, { Toaster } from 'react-hot-toast';
 import Layout from '../../components/admin_layout/Layout';
 import userApi from '../../api/userApi';
 import _ from 'lodash';
-
+import {
+    InputLabel,
+    MenuItem,
+    Button,
+    FormControl,
+    TextField,
+    InputAdornment
+} from '@mui/material';
+import specificationsApi from '../../api/specificationsApi';
 const Employee = () => {
     const [Avatar, setAvatar] = useState('')
     const [CitizenID, setCitizenID] = useState('')
     const [FullName, setFullName] = useState('')
+    const [Gender, setGender] = useState('')
+    const [userName, setUserName] = useState('')
     const [Email, setEmail] = useState('')
     const [Birthday, setBirthday] = useState('')
     const [PhoneNumber, setPhoneNumber] = useState('')
-    const [Orders, setOrders] = useState('')
-    const [Specification, setSpecification] = useState('')
+    const [SpecificationID, setSpecificationID] = useState('')
+    const [Specification, setSpecification] = useState([])
     const haudleSubmit = async (e) => {
         e.preventDefault();
-        const userToken = await userApi.addEmployee(Avatar, CitizenID, FullName, Email, Birthday, PhoneNumber, Orders, Specification);
+        await userApi.addEmployee(Avatar,userName, FullName, Email, Birthday, Gender,PhoneNumber,CitizenID , SpecificationID).then(res => {
+            if (res.status == 200) {
+
+                toast.success(' Creat Successfully')
+            }
+        });
         console.log(userToken)
     }
     const [Employees, setEmployee] = useState([])
@@ -24,11 +39,16 @@ const Employee = () => {
         userApi.getEmployee()
             .then(res => {
                 setEmployee(res)
-                toast.success(' Creat Successfully')
             })
             .catch(err => {
                 console.log(err)
-                toast.error("Creat fail")
+            })
+            specificationsApi.getAll().then(res => {
+                setSpecification(res)
+                console.log(res)
+            })
+            .catch(err => {
+                console.log(err)
             })
     }, []);
     return (
@@ -36,87 +56,148 @@ const Employee = () => {
 
             <Toaster />
             <div className="flex items-center justify-between w-full">
-                <div className="flex flex-col lg:flex-row w-full rounded bg-white mt-4">
-                    <div className="lg:w-2/5 bg-gray-500 border border-gray-200  dark:bg-gray-800" >
-                        <div className="w-full ">
+                <div className=" w-full rounded bg-white mt-4">
+                    <div className=" bg-white border border-gray-200  mb-3 dark:bg-gray-800" >
+                        <div className="w-7/12">
                             <form action="#" method="POST">
-                                <div className="">
-                                    <div className="px-4 py-5 bg-white sm:p-6">
+                                <div className="px-4 py-5 bg-white sm:p-6">
+
+                                    <div className="px-4 py-3 bg-gray-50  sm:px-6">
                                         <div className="grid grid-cols-6 gap-6">
-                                            <div className="relative overflow-x-auto  sm:rounded-lg">
-                                                <span className="text-gray-600 text-lg font-semibold">Sevice</span>
-                                            </div>
-                                            <div className="col-span-6 ">
-                                                <label htmlFor="first-name" className="block text-sm font-medium text-gray-700 m-2">
+                                            <div className="col-span-6 sm:col-span-3">
+                                                <label htmlFor="avatar" className="block text-sm font-medium text-gray-700">
                                                     Avatar
                                                 </label>
-                                                <input type="text" onChange={Avatar => setAvatar(Avatar.target.value)}
-                                                    name="name"
-                                                    id="first-name" className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-800 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 
-                                                    shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Avatar" />
+                                                <input
+                                                    type="text"
+                                                    name="avatar"
+                                                    id="avatar"
+                                                    onChange={(e) => setAvatar(e.target.value)}
+                                                    autoComplete="given-name"
+                                                    className="mt-1 px-3 py-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                                />
                                             </div>
-                                            <div className="col-span-6 sm:col-span-6">
-                                                <label htmlFor="email-address" className="block text-sm font-medium text-gray-700 m-2">
+                                            <div className="col-span-12 grid grid-cols-6 gap-6">
+                                                <div className="col-span-6 sm:col-span-3">
+                                                    <label htmlFor="FullName" className="block text-sm font-medium text-gray-700">
+                                                        Full Name
+                                                    </label>
+                                                    <input
+                                                        type="text"
+                                                        name="FullName"
+                                                        id="FullName"
+                                                        onChange={(e) => setFullName(e.target.value)}
+                                                        autoComplete="given-name"
+                                                        className="mt-1 px-3 py-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                                    />
+                                                </div>
+                                                <div className="col-span-6 sm:col-span-3">
+                                                    <label htmlFor="userName" className="block text-sm font-medium text-gray-700">
+                                                        User Name
+                                                    </label>
+                                                    <input
+                                                        type="text"
+                                                        name="userName"
+                                                        onChange={(e) => setUserName(e.target.value)}
+                                                        id="userName"
+                                                        autoComplete="family-name"
+                                                        className="mt-1 px-3 py-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div className="col-span-12 grid grid-cols-6 gap-6">
+                                                <div className="col-span-3 sm:col-span-2">
+                                                    <label htmlFor="country" className="block text-sm font-medium text-gray-700">
+                                                        Gender
+                                                    </label>
+                                                    <select
+                                                        id="country"
+                                                        name="country"
+                                                        onChange={(e) => setGender(e.target.value)}
+                                                        autoComplete="country-name"
+                                                        className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                                                    >
+                                                        <option value={1}>Male</option>
+                                                        <option value={0}>Female</option>
+                                                        <option value={2}>Order</option>
+                                                    </select>
+                                                </div>
+                                                <div className="col-span-3 sm:col-span-4">
+                                                    <label htmlFor="country" className="block text-sm font-medium text-gray-700">
+                                                        Specification
+                                                    </label>
+                                                    <select
+                                                        id="country"
+                                                        name="country"
+                                                        onChange={(e) => setSpecificationID(e.target.value)}
+                                                        autoComplete="country-name"
+                                                        className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                                                    >
+                                                        {_.map(Specification, (item, index) => (
+                                                            <option key={index} value={item.ID}>{item.Name}</option>
+                                                        ))}
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div className="col-span-12 grid grid-cols-6 gap-6">
+                                                <div className="col-span-6 sm:col-span-3">
+                                                    <label htmlFor="first-name" className="block text-sm font-medium text-gray-700">
+                                                        Email
+                                                    </label>
+                                                    <input
+                                                        type="text"
+                                                        onChange={(e) => setEmail(e.target.value)}
+                                                        name="first-name"
+                                                        id="first-name"
+                                                        autoComplete="given-name"
+                                                        className="mt-1 px-3 py-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                                    />
+                                                </div>
+                                                <div className="col-span-6 sm:col-span-3">
+                                                    <label htmlFor="last-name" className="block text-sm font-medium text-gray-700">
+                                                        Phone Number
+                                                    </label>
+                                                    <input
+                                                        type="text"
+                                                        name="last-name"
+                                                        onChange={(e) => setPhoneNumber(e.target.value)}
+                                                        id="last-name"
+                                                        autoComplete="family-name"
+                                                        className="mt-1 px-3 py-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div className="col-span-12 grid grid-cols-6 gap-6">
+                                                <div className="col-span-4 sm:col-span-4">
+                                                    <label htmlFor="country" className="block text-sm font-medium text-gray-700">
                                                     CitizenID
-                                                </label>
-                                                <input type="id" onChange={CitizenID => setCitizenID(CitizenID.target.value)}
-                                                    id="first-name" className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-800 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 
-                                                    shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="CitizenID" />
-                                            </div>
-                                            <div className="col-span-6 sm:col-span-6">
-                                                <label htmlFor="email-address" className="block text-sm font-medium text-gray-700 m-2">
-                                                    FullName
-                                                </label>
-                                                <input type="fullname" onChange={FullName => setFullName(FullName.target.value)}
-                                                    id="first-name" className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-800 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 
-                                                    shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="FullName" />
-                                            </div>
-                                            <div className="col-span-6 sm:col-span-6">
-                                                <label htmlFor="email-address" className="block text-sm font-medium text-gray-700 m-2">
-                                                    Email
-                                                </label>
-                                                <input type="email" onChange={Email => setEmail(Email.target.value)}
-                                                    id="first-name" className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-800 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 
-                                                    shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Email" />
-                                            </div>
-                                            <div className="col-span-6 sm:col-span-6">
-                                                <label htmlFor="email-address" className="block text-sm font-medium text-gray-700 m-2">
-                                                    Birthday
-                                                </label>
-                                                <input type="birthday" onChange={Birthday => setBirthday(Birthday.target.value)}
-                                                    id="first-name" className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-800 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 
-                                                    shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Birthday" />
-                                            </div>
-                                            <div className="col-span-6 sm:col-span-6">
-                                                <label htmlFor="email-address" className="block text-sm font-medium text-gray-700 m-2">
-                                                    PhoneNumber
-                                                </label>
-                                                <input type="phonenumber" onChange={PhoneNumber => setPhoneNumber(PhoneNumber.target.value)}
-                                                    id="first-name" className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-800 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 
-                                                    shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="PhoneNumber" />
-                                            </div>
-                                            <div className="col-span-6 sm:col-span-6">
-                                                <label htmlFor="email-address" className="block text-sm font-medium text-gray-700 m-2">
-                                                    Orders
-                                                </label>
-                                                <input type="text" onChange={Orders => setOrders(Orders.target.value)}
-                                                    id="first-name" className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-800 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 
-                                                    shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Orders" />
-                                            </div>
-                                            <div className="col-span-6 sm:col-span-6">
-                                                <label htmlFor="email-address" className="block text-sm font-medium text-gray-700 m-2">
-                                                    Specification
-                                                </label>
-                                                <input type="text" onChange={Specification => setSpecification(Specification.target.value)}
-                                                    id="first-name" className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-800 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 
-                                                    shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Specification" />
+                                                    </label>
+                                                    <input
+                                                        type="number"
+                                                        name="first-name"
+                                                        onChange={(e) => setCitizenID(e.target.value)}
+                                                        id="first-name"
+                                                        autoComplete="given-name"
+                                                        className="mt-1 px-3 py-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                                    />
+                                                </div>
+                                                <div className="col-span-3 sm:col-span-2">
+                                                    <label htmlFor="country" className="block text-sm font-medium text-gray-700">
+                                                        Birthday
+                                                    </label>
+                                                    <input
+                                                        type="date"
+                                                        name="first-name"
+                                                        onChange={(e) => setBirthday(e.target.value)}
+                                                        id="first-name"
+                                                        autoComplete="given-name"
+                                                        className="mt-1 px-3 py-2 border focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                                    />
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div className="px-4 py-3 bg-gray-50 text-right sm:px-6">
-
-                                        <button onClick={haudleSubmit} type="button" className="py-2 px-4 flex justify-center items-center  bg-blue-600 hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-blue-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
-                                            Submit2
+                                        <button onClick={haudleSubmit} type="button" className="py-2 px-4 mt-2 flex justify-center items-center  bg-blue-600 hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-blue-200 text-white  transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
+                                            Submit
                                         </button>
 
                                     </div>
@@ -125,7 +206,7 @@ const Employee = () => {
                         </div>
                     </div>
 
-                    <div className=" lg:w-3/5 border-gray-200 dark:bg-gray-800" >
+                    <div className=" border-gray-200 dark:bg-gray-800" >
                         <div className="w-full">
                             <table className=" text-sm text-left text-gray-500 dark:text-gray-400">
                                 <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -164,9 +245,9 @@ const Employee = () => {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                {_.map(Employees,(employee, index)=> (
+                                    {_.map(Employees, (employee, index) => (
                                         <tr
-                                        key={index}
+                                            key={index}
                                             className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                                             <td className="w-4 p-4">
                                                 <div className="flex items-center">

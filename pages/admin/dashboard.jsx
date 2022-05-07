@@ -8,7 +8,7 @@ const dashboard = () => {
         <Layout>
             <div className="px-6 pt-6 2xl:container   bg-white dark:bg-gray-800">
                 <div className="container mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 pt-6 gap-8">
-                    <Stat title={"Hello"} statNumble={10}  icon={ShoppingCartIcon} iconSub={ShoppingCartIcon} data={"40%"} desc={"hello fuck you"}/>
+                    <Stat title={"Hello"} statNumble={10}  icon={ShoppingCartIcon} iconSub={ShoppingCartIcon} data={"40%"} desc={""}/>
                     <Stat title={"hi"} statNumble={20} icon={ShieldCheckIcon} iconSub={ShieldCheckIcon}/>
                 </div>
                 <div className="container mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 pt-6 gap-8 mb-5">

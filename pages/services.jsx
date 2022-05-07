@@ -33,7 +33,7 @@ const Services = () => {
         }
         return <>
                 {services.map((service, index) => (
-                    <Service key={index} item={service} name={service.Name} image={service.Image} desc={service.Description} />
+                    <Service key={index} item={service} name={service.Name} image={service.Image} desc={service.Description} price={service.Price}/>
                 ))}
               </>
     }

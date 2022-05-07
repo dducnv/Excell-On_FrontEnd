@@ -1,19 +1,27 @@
 import { Fragment, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { XIcon } from '@heroicons/react/outline'
-import {useCart } from "react-use-cart";
-
+import { useCart } from "react-use-cart";
+import CurrencyFormat from 'react-currency-format';
+import Link from 'next/link';
 
 export default function CartPopup(props) {
+  const cartTotalPrice = 0;
   const {
     isEmpty,
     totalUniqueItems,
     items,
+    clearCartMetadata,
     updateItemQuantity,
     removeItem,
+    emptyCart
   } = useCart();
+  items.forEach(element => {
+    cartTotalPrice += element.GrandTotal;
+  });
   return (
-    <Transition.Root show={props.isOpen} as={Fragment}>
+    <div className="relative">
+   <Transition.Root show={props.isOpen} as={Fragment}>
       <Dialog as="div" className="fixed inset-0 z-50 overflow-hidden" onClose={props.closeCart}>
         <div className="absolute inset-0   overflow-hidden">
           <Transition.Child
@@ -58,7 +66,8 @@ export default function CartPopup(props) {
                     <div className="mt-8">
                       <div className="flow-root">
                         <ul role="list" className="-my-6 divide-y divide-gray-200">
-                          {items.map((item,index) => (
+                          {isEmpty && <li className="p-6 text-center">Your cart is empty</li>}
+                          {items.map((item, index) => (
                             <li key={index} className="flex py-6 border-b">
                               <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
                                 <img
@@ -70,22 +79,27 @@ export default function CartPopup(props) {
 
                               <div className="ml-4 flex flex-1 flex-col">
                                 <div>
-                                  <div className="flex justify-between text-base font-medium text-gray-900">
+                                  <div className=" text-base font-medium text-gray-900">
                                     <h3>
                                       <a> {item.name} </a>
                                     </h3>
-                                    <p className="ml-4">{item.price * item.Qty}$</p>
+                                    <p className="mt-2">Grand Total:</p>
+                                    <p ><CurrencyFormat value={item.GrandTotal} displayType={'text'} thousandSeparator={true} prefix={'$'} /> / {item.TotalDay} Day - {item.Qty} Employees</p>
                                   </div>
                                   <p className="mt-1 text-sm text-gray-500">{item.SpecificationName}</p>
-                                  <p className="mt-1 text-sm text-gray-500">{item.price}$</p>
-                                  <p className="mt-1 text-sm text-gray-500">Start Date: {item.StartDate}</p>
-                                  <p className="mt-1 text-sm text-gray-500">End Date: {item.EndDate}</p>
+                                  <p className="mt-1 text-sm text-gray-500">Number of employees: {item.Qty}</p>
+                                  <p className="mt-1 text-sm text-gray-500">Unit Price: <CurrencyFormat value={item.price} displayType={'text'} thousandSeparator={true} prefix={'$'} /> / 1 day for 1 Employee</p>
+                                  <p className="mt-1 text-sm text-gray-500">Total: <CurrencyFormat value={item.price * item.Qty} displayType={'text'} thousandSeparator={true} prefix={'$'} /> / 1 day for {item.Qty} Employees</p>
+
                                 </div>
                                 <div className="flex flex-1 items-end justify-between text-sm">
-                                  <p className="text-gray-500">Number of employees: {item.Qty}</p>
+                                  <div>
+                                    <p className="mt-1 text-sm text-gray-500">Start Date: {item.StartDate}</p>
+                                    <p className="mt-1 text-sm text-gray-500">End Date: {item.EndDate}</p>
+                                  </div>
 
                                   <div className="flex">
-                                    <button onClick={()=> removeItem(item.id)} type="button" className="font-medium text-indigo-600 hover:text-indigo-500">
+                                    <button onClick={() => removeItem(item.id)} type="button" className="font-medium text-indigo-600 hover:text-indigo-500">
                                       Remove
                                     </button>
                                   </div>
@@ -101,16 +115,18 @@ export default function CartPopup(props) {
                   <div className="border-t border-gray-200 py-6 px-4 sm:px-6">
                     <div className="flex justify-between text-base font-medium text-gray-900">
                       <p>Subtotal</p>
-                      <p>$262.00</p>
+                      <p><CurrencyFormat value={cartTotalPrice} displayType={'text'} thousandSeparator={true} prefix={'$'} /></p>
                     </div>
                     <p className="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
                     <div className="mt-6">
+                      <Link href={"/checkout"}>
                       <a
-                        href="#"
                         className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
                       >
                         Checkout
                       </a>
+                      </Link>
+                     
                     </div>
                     <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
                       <p>
@@ -132,5 +148,7 @@ export default function CartPopup(props) {
         </div>
       </Dialog>
     </Transition.Root>
+    </div>
+ 
   )
 }

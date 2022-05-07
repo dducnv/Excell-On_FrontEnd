@@ -10,7 +10,7 @@ const style = {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: 650,
+    
     bgcolor: 'background.paper',
     boxShadow: 24,
     p: 4,
@@ -25,7 +25,7 @@ const ModalComponent = (props) => {
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
             >
-                <Box sx={style}>
+                <Box sx={style} style={{width:props.widthModal}}>
                     <Typography id="modal-modal-title" variant="h6" component="h2">
                         {props.ModelTitle}
                     </Typography>

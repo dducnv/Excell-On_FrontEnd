@@ -1,7 +1,5 @@
 import React from 'react'
 import Layout from '../components/user_layout/Layout'
-
-
 const About = () => {
   return (
     <Layout>

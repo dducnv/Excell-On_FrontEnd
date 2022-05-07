@@ -9,11 +9,12 @@ const authApi ={
             },
         });
     },
-    Register : (FullName,Email,UserName,Password,ConfirmPassword) =>{
+    Register : (FullName,Email,UserName,Address,Password,ConfirmPassword) =>{
         let registerData = JSON.stringify({
             FullName:FullName,
             Email:Email,
             UserName:UserName,
+            Address:Address,
             Password:Password,
             ConfirmPassword:ConfirmPassword
         })

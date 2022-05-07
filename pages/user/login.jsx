@@ -2,9 +2,11 @@
 import React, {useState} from 'react';
 import authApi from "../../api/authApi";
 import toast, { Toaster } from 'react-hot-toast';
+import { useRouter } from 'next/router'
 
 
 const Login = () => {
+    const router = useRouter();
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [username,setUsername] = useState( '');
     // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -18,10 +20,24 @@ const Login = () => {
             toast.error("Vui Lòng Nhập Password.")
         }else {
             const userToken = await authApi.LoginApi(username,password);
-            console.log(userToken)
+            const printAddress = async () => {
+                const token = await userToken;
+                localStorage.setItem("user-token", token.token_type+" "+token.access_token);
+            };
+            if(userToken.status === 200){
+                printAddress();
+                toast.success("Login Successful!")
+                router.push('/')
+            }else{
+                toast.error("Login Failed!, Please Check Your User Name or Password.")
+            }
+           
         }
 
 
+    }
+    if(localStorage.getItem("user-token") || localStorage.getItem("user-token") !== null){
+          router.push('/')
     }
 
     return (

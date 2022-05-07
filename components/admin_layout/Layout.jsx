@@ -1,8 +1,12 @@
 import React from 'react'
 import Navbar from './Navbar';
 import Slidebar from './Slidebar';
-
+import { useRouter } from 'next/router'
 export const Layout = (props) => {
+    const router = useRouter();
+    if(!localStorage.getItem("user-token") || localStorage.getItem("user-token") == null){
+        router.push('/user/login')
+    }
     return (
         <>
             <Slidebar />

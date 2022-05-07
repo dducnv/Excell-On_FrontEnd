@@ -6,17 +6,22 @@ const userApi = {
     getByID: (id) =>{
         return axiosClient.get(`/api/user/users/${id}`)
     },
-    addEmployee: (Avatar,FullName,Email,Birthday,Gender,PhoneNumber,Orders,CitizenID,Specification) =>{
+    addEmployee: (Avatar,userName,FullName,Email,Birthday,Gender,PhoneNumber,CitizenID,Specification) =>{
+        
         return axiosClient.post(`/api/user/AddEmployee`,{
             FullName:FullName,
             Email:Email,
             Birthday:Birthday,
+            UserName:userName,
             Avatar:Avatar,
             Gender:Gender,
             PhoneNumber:PhoneNumber,
-            Orders:Orders,
             CitizenID:CitizenID,
             SpecificationID:Specification,
+        },{
+            headers: {
+                "Access-Control-Allow-Origin": "*"
+            },
         })
     },
     getEmployee: ()=>{

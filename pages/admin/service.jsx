@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import axios from 'axios';
 import serviceApi from '../../api/serviceApi';
 import Layout from '../../components/admin_layout/Layout';
 
